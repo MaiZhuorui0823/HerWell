@@ -680,12 +680,7 @@ else:
             step=1,
             key="trend_window_days",
         )
-        tick_step = st.selectbox(
-            "X tick interval (days)",
-            options=[5, 10, 15, 20],
-            index=1,
-            key="trend_tick_step",
-        )
+        tick_step = 10  # Fixed x-axis tick interval
         start_day = max_day - day_window + 1
         window_ts = user_ts[user_ts["day_in_study"] >= start_day].copy()
         window_ts["relative_day"] = window_ts["day_in_study"] - max_day
