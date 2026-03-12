@@ -17,6 +17,22 @@ except Exception:
     alt = None
 
 
+def symptom_to_score(series: pd.Series) -> pd.Series:
+    """Convert mixed symptom text/numeric values into numeric severity."""
+    mapping = {
+        "not at all": 0,
+        "very low/little": 1,
+        "low": 2,
+        "moderate": 3,
+        "high": 4,
+        "very high": 5,
+    }
+    lower = series.astype(str).str.strip().str.lower()
+    mapped = lower.map(mapping)
+    numeric = pd.to_numeric(series, errors="coerce")
+    return mapped.fillna(numeric)
+
+
 st.set_page_config(page_title="Innovation Dashboard MVP", layout="wide")
 st.title("Innovation Dashboard (MVP)")
 st.caption(
@@ -749,150 +765,107 @@ else:
             st.warning(
                 "No plottable trend columns found in dashboard_ready.csv.")
 
+def prepare_stage4_request(user_id: int, kpi_row: dict, alerts_list: list, 
+                           pred_data: dict, triage_data: dict, 
+                           stage2_profile: dict, evidence_query: str) -> dict:
+    """Prepare request payload for Stage 4 RAG + LLM pipeline.
+    
+    This packages frontend data into format expected by Stage 4's rag_api.py
+    """
+    request_payload = {
+        "user_id": int(user_id),
+        "query_mode": "doctor_summary",
+        "evidence_keyword": evidence_query.strip() if evidence_query else "",
+        
+        # KPI snapshot (recent 14/30 days)
+        "kpi_snapshot": {
+            "sleep_score_mean_14d": fmt_num(kpi_row.get('sleep_score_mean_14d'), 2),
+            "sleep_score_delta_7d": fmt_num(kpi_row.get('sleep_score_delta_7d'), 2),
+            "steps_mean_7d": fmt_num(kpi_row.get('steps_mean_7d'), 0),
+            "steps_delta_7d": fmt_num(kpi_row.get('steps_delta_7d'), 0),
+            "rhr_mean_14d": fmt_num(kpi_row.get('rhr_mean_14d'), 2),
+            "stress_mean_14d": fmt_num(kpi_row.get('stress_mean_14d'), 2),
+            "cramps_max_30d": fmt_num(kpi_row.get('cramps_max_30d'), 2),
+        },
+        
+        # Alerts from quick checks
+        "alerts": alerts_list[:5],  # Top 5 alerts
+        
+        # Stage 2 profile (patient context)
+        "stage2_profile": stage2_profile.copy() if isinstance(stage2_profile, dict) else None,
+        
+        # Stage 2 predictions (if available)
+        "prediction_data": pred_data.copy() if isinstance(pred_data, dict) else None,
+        "triage_data": triage_data.copy() if isinstance(triage_data, dict) else None,
+    }
+    return request_payload
+
+
+def call_stage4_rag_api(request_payload: dict) -> tuple:
+    """Call Stage 4's rag_api.py to generate doctor summary using RAG + LLM.
+    
+    Returns: (summary_markdown, raw_summary_text, success)
+    """
+    # TODO: Replace with actual API call to Stage 4
+    # For now, returning placeholder indicating waiting for Stage 4 implementation
+    
+    try:
+        # Placeholder: would call something like:
+        # response = requests.post("http://localhost:8000/api/doctor_summary", 
+        #                         json=request_payload, timeout=30)
+        # if response.status_code == 200:
+        #     result = response.json()
+        #     return result["markdown"], result["raw_text"], True
+        
+        st.warning("⏳ Stage 4 RAG + LLM pipeline not yet connected")
+        return None, None, False
+        
+    except Exception as e:
+        st.error(f"Error calling Stage 4 API: {e}")
+        return None, None, False
+
+
 st.markdown("---")
 st.subheader("Summary for Doctor")
 
 evidence_query = st.text_input(
-    "Evidence keyword for report (optional)",
+    "Query keyword for evidence retrieval (optional)",
     value="cycle",
     key="doctor_evidence_query",
 )
 
 if st.button("Generate Summary for Doctor"):
-    evidence_line = "Evidence: pending (no retrieval result)."
-    evidence_mode = ""
-    evidence_distance_line = ""
-
-    if evidence_query.strip():
-        top_hits, evidence_mode, _ = retrieve_stage3_hits(
-            base_dir, evidence_query.strip(), k=3)
-
-        if top_hits:
-            hit = select_best_evidence_hit(top_hits, evidence_query.strip())
-            evidence_line = (
-                f"Evidence ({evidence_mode}): {hit.get('snippet', 'N/A')} "
-                f"[source: {hit.get('source', 'N/A')}]"
-            )
-            if hit.get("distance") is not None:
-                evidence_distance_line = f"Hit distance: {hit.get('distance'):.4f}"
-            else:
-                evidence_distance_line = "Hit distance: N/A"
-    else:
-        evidence_distance_line = "Hit distance: N/A"
-
-    quick_check_line = "No warning from quick checks."
-    if alerts:
-        quick_check_line = "; ".join(alerts[:3])
-
-    # Build prediction flag from prediction_data
-    prediction_flag = "pending"
-    if prediction_data is not None:
-        pred_label = _extract_field(
-            prediction_data, ["pred_label", "prediction_label", "label"])
-        pred_prob = _extract_field(
-            prediction_data, ["pred_prob", "prediction_prob", "probability", "prob"])
-        if pred_label is not None and pred_prob is not None:
-            prediction_flag = f"{pred_label} ({fmt_num(pred_prob, 4)})"
-        elif pred_label is not None:
-            prediction_flag = str(pred_label)
-        elif pred_prob is not None:
-            prediction_flag = f"prob={fmt_num(pred_prob, 4)}"
-
-    triage_status = "pending"
-    if triage_data is not None and isinstance(triage_data, dict):
-        triage_level = _extract_field(
-            triage_data, ["level", "triage_level", "severity"])
-        if triage_level is not None:
-            triage_status = str(triage_level).lower()
-
-    if triage_status == "pending" and stage2_profile is not None and isinstance(stage2_profile, dict):
-        triage_status = str(stage2_profile.get(
-            "triage", stage2_profile.get("triage_level", "pending"))).lower()
-
-    if triage_status == "red":
-        next_step = "Suggested next step: seek urgent medical evaluation."
-    elif triage_status == "yellow":
-        next_step = "Suggested next step: book consultation and continue monitoring."
-    elif triage_status == "green":
-        next_step = "Suggested next step: self-care and routine monitoring."
-    elif len(alerts) >= 3:
-        next_step = "Suggested next step: seek medical attention if severe symptoms occur; otherwise monitor closely and consult soon."
-    elif len(alerts) >= 1:
-        next_step = "Suggested next step: self-monitor and consider consultation if symptoms persist or worsen."
-    else:
-        next_step = "Suggested next step: continue self-monitoring and maintain routine care."
-
-    summary_lines = [
-        f"Patient ID: {int(selected_user)}",
-        f"Query keyword: {evidence_query.strip() if evidence_query.strip() else 'N/A'}",
-        evidence_distance_line,
-        "",
-        "Patient snapshot (recent 14/30 days)",
-        f"- Sleep score mean (14d): {fmt_num(u.get('sleep_score_mean_14d'), 2)}",
-        f"- Steps mean (7d): {fmt_num(u.get('steps_mean_7d'), 0)}",
-        f"- Resting HR mean (14d): {fmt_num(u.get('rhr_mean_14d'), 2)}",
-        f"- Stress mean (14d): {fmt_num(u.get('stress_mean_14d'), 2)}",
-        "",
-        "Key patterns",
-        f"- Sleep delta (7d vs prev 7d): {fmt_num(u.get('sleep_score_delta_7d'), 2)}",
-        f"- Steps delta (7d vs prev 7d): {fmt_num(u.get('steps_delta_7d'), 0)}",
-        f"- Cramp max (30d): {fmt_num(u.get('cramps_max_30d'), 2)}",
-        "",
-        "Flags",
-        f"- Prediction: {prediction_flag}",
-        f"- Triage: {triage_status}",
-        f"- Quick checks: {quick_check_line}",
-        "",
-        evidence_line,
-        "",
-        next_step,
-        "",
-        "Safety note: This summary is for decision support and not a diagnosis.",
-    ]
-
-    if stage2_profile is not None:
-        summary_lines.insert(
-            3,
-            f"Stage2 profile: chief concern = {stage2_profile.get('chief_concern', 'N/A')}; "
-            f"what tried = {stage2_profile.get('what_tried', 'N/A')}."
+    # Prepare request for Stage 4
+    request_payload = prepare_stage4_request(
+        user_id=int(selected_user),
+        kpi_row=u,
+        alerts_list=alerts,
+        pred_data=prediction_data,
+        triage_data=triage_data,
+        stage2_profile=stage2_profile,
+        evidence_query=evidence_query
+    )
+    
+    # Call Stage 4 RAG + LLM pipeline
+    with st.spinner("🔄 Generating medical summary with RAG + LLM..."):
+        summary_md, summary_raw, success = call_stage4_rag_api(request_payload)
+    
+    if success and summary_md is not None:
+        # Display generated summary
+        st.markdown(summary_md)
+        
+        with st.expander("Raw summary (copy/export)"):
+            st.text_area("Summary Output", value=summary_raw, height=280)
+        
+        st.download_button(
+            label="Download summary.txt",
+            data=summary_raw,
+            file_name=f"summary_user_{int(selected_user)}.txt",
+            mime="text/plain",
         )
-
-    raw_summary = "\n".join(summary_lines)
-
-    readable_md = (
-        f"### Patient {int(selected_user)}\n"
-        f"- Query keyword: `{evidence_query.strip() if evidence_query.strip() else 'N/A'}`\n"
-        f"- {evidence_distance_line}\n"
-        f"\n"
-        f"**Patient snapshot**\n"
-        f"- Sleep score mean (14d): {fmt_num(u.get('sleep_score_mean_14d'), 2)}\n"
-        f"- Steps mean (7d): {fmt_num(u.get('steps_mean_7d'), 0)}\n"
-        f"- Resting HR mean (14d): {fmt_num(u.get('rhr_mean_14d'), 2)}\n"
-        f"- Stress mean (14d): {fmt_num(u.get('stress_mean_14d'), 2)}\n"
-        f"\n"
-        f"**Flags**\n"
-        f"- Prediction: {prediction_flag}\n"
-        f"- Triage: {triage_status}\n"
-        f"- Quick checks: {quick_check_line}\n"
-        f"\n"
-        f"**Evidence**\n"
-        f"- {evidence_line}\n"
-        f"\n"
-        f"**Suggested next step**\n"
-        f"- {next_step}\n"
-        f"\n"
-        f"_Safety note: This summary is for decision support and not a diagnosis._"
-    )
-
-    st.markdown(readable_md)
-    with st.expander("Raw summary (copy/export)"):
-        st.text_area("Summary Output", value=raw_summary, height=280)
-    st.download_button(
-        label="Download summary.txt",
-        data=raw_summary,
-        file_name=f"summary_user_{int(selected_user)}.txt",
-        mime="text/plain",
-    )
+    else:
+        st.info("💡 Waiting for Stage 4 implementation. "
+               "Connect rag_api.py to enable AI-generated summaries.")
 
 st.markdown("---")
 st.subheader("📚 Relevant Medical References")
