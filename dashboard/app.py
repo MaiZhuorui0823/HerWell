@@ -895,42 +895,44 @@ if st.button("Generate Summary for Doctor"):
     )
 
 st.markdown("---")
-st.subheader("Knowledge Base (Stage3 Check)")
+st.subheader("📚 Relevant Medical References")
 
 chroma_dir = find_chroma_db_dir(base_dir)
 if chroma_dir is not None:
-    st.success(f"`./chroma_db` found: {chroma_dir}")
-    db_path = chroma_dir / "chroma.sqlite3"
-    st.caption(f"SQLite file: {db_path}")
-
-    collections = get_chroma_collections(chroma_dir)
-    if collections:
-        st.write("Detected collections:")
-        st.code(", ".join(collections))
-        if "medical_knowledge" in collections:
-            st.success("Collection `medical_knowledge` found.")
-            st.caption(
-                "Collection path resolved via local Chroma DB (persist dir: ./chroma_db).")
-    else:
-        st.warning("No collection metadata found in chroma sqlite.")
+    with st.expander("🔧 Knowledge Base Status", expanded=False):
+        st.success("✓ Knowledge base available")
+        db_path = chroma_dir / "chroma.sqlite3"
+        st.caption(f"Database: {db_path.name}")
+        collections = get_chroma_collections(chroma_dir)
+        if collections and "medical_knowledge" in collections:
+            st.success("✓ Medical knowledge collection found")
+        else:
+            st.warning("Collection metadata unavailable")
+    
+    top_k = st.slider("Number of references", min_value=1, max_value=5, value=3, step=1, key="kb_slider")
+    query = st.text_input("Search for medical information", value="cycle", placeholder="e.g., pain, fever, medication...", key="kb_query")
+    
+    if query.strip():
+        kb_results, retrieval_mode, _ = retrieve_stage3_hits(base_dir, query, k=top_k)
+        if not kb_results:
+            st.info(f"ℹ️ No references found for '{query}'. Try different keywords.")
+        else:
+            st.markdown(f"### Found {len(kb_results)} relevant reference(s)")
+            
+            for i, item in enumerate(kb_results, 1):
+                with st.container():
+                    col1, col2 = st.columns([0.8, 0.2])
+                    with col1:
+                        st.markdown(f"**Reference {i}: {item['title']}**")
+                        st.write(item["snippet"])
+                    with col2:
+                        if item.get("distance") is not None:
+                            relevance = max(0, 100 - int(item.get("distance", 0) * 100))
+                            st.metric("Relevance", f"{relevance}%")
+                    
+                    with st.expander("📖 Full text & source"):
+                        st.write(item.get("full_text", item.get("snippet", "")))
+                        st.caption(f"📍 Source: {item['source']}")
+                    st.divider()
 else:
-    st.info("`./chroma_db` not found (Stage3 pending).")
-
-top_k = st.slider("Top-k results", min_value=1, max_value=5, value=3, step=1)
-query = st.text_input("Chroma Vector Search", value="cycle")
-if query.strip():
-    kb_results, retrieval_mode, _ = retrieve_stage3_hits(
-        base_dir, query, k=top_k)
-    if not kb_results:
-        st.warning("No keyword matches found in local chroma_db text files.")
-    else:
-        st.caption(f"Retrieval mode: {retrieval_mode}")
-        st.caption("Distance: smaller = more similar.")
-        for i, item in enumerate(kb_results, 1):
-            st.markdown(f"**{i}. {item['title']}**")
-            st.caption(f"Source: {item['source']}")
-            if item.get("distance") is not None:
-                st.caption(f"Distance: {item['distance']:.4f}")
-            st.write(item["snippet"])
-            with st.expander("Show full text"):
-                st.write(item.get("full_text", item.get("snippet", "")))
+    st.info("📚 Medical knowledge base not yet loaded (Stage3 pending). Knowledge base will be available once initialized.")
