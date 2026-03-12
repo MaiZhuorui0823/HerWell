@@ -549,50 +549,25 @@ if row.empty:
 u = row.iloc[0]
 
 stage2_profile, stage2_hint = load_stage2_profile(base_dir, int(selected_user))
-prediction_data, prediction_hint = load_prediction_data(
-    base_dir, int(selected_user))
 triage_data, triage_hint = load_triage_data(base_dir, int(selected_user))
 
-st.subheader("Prediction + Triage (Placeholder)")
-p_col, t_col = st.columns(2)
+st.subheader("Triage / Risk Assessment")
+if triage_data is not None:
+    st.success("Status: ready")
+    triage_level = _extract_field(
+        triage_data, ["level", "triage_level", "severity"])
+    triage_reasons = _extract_field(
+        triage_data, ["reasons", "reason", "explanation"])
+    if triage_level is not None:
+        st.write(f"**Risk Level**: {triage_level}")
+    if triage_reasons is not None:
+        st.write(f"**Risk Reasons**: {triage_reasons}")
 
-with p_col:
-    st.markdown("### Prediction")
-    if prediction_data is not None:
-        st.success("Status: ready")
-        pred_label = _extract_field(
-            prediction_data, ["pred_label", "prediction_label", "label"])
-        pred_prob = _extract_field(
-            prediction_data, ["pred_prob", "prediction_prob", "probability", "prob"])
-        if pred_label is not None:
-            st.write(f"**Label**: {pred_label}")
-        if pred_prob is not None:
-            st.write(f"**Probability**: {fmt_num(pred_prob, 4)}")
-
-        with st.expander("Full prediction data"):
-            st.json(prediction_data)
-    else:
-        st.info("Status: pending")
-        st.caption(f"Waiting for prediction data ({prediction_hint})")
-
-with t_col:
-    st.markdown("### Triage")
-    if triage_data is not None:
-        st.success("Status: ready")
-        triage_level = _extract_field(
-            triage_data, ["level", "triage_level", "severity"])
-        triage_reasons = _extract_field(
-            triage_data, ["reasons", "reason", "explanation"])
-        if triage_level is not None:
-            st.write(f"**Level**: {triage_level}")
-        if triage_reasons is not None:
-            st.write(f"**Reasons**: {triage_reasons}")
-
-        with st.expander("Full triage data"):
-            st.json(triage_data)
-    else:
-        st.info("Status: pending")
-        st.caption(f"Waiting for triage data ({triage_hint})")
+    with st.expander("Full triage data"):
+        st.json(triage_data)
+else:
+    st.info("Status: pending")
+    st.caption(f"Waiting for triage data ({triage_hint})")
 
 st.markdown("---")
 st.subheader("Stage2 Profile (Optional Extension)")
@@ -766,8 +741,8 @@ else:
                 "No plottable trend columns found in dashboard_ready.csv.")
 
 def prepare_stage4_request(user_id: int, kpi_row: dict, alerts_list: list, 
-                           pred_data: dict, triage_data: dict, 
-                           stage2_profile: dict, evidence_query: str) -> dict:
+                           triage_data: dict, stage2_profile: dict, 
+                           evidence_query: str) -> dict:
     """Prepare request payload for Stage 4 RAG + LLM pipeline.
     
     This packages frontend data into format expected by Stage 4's rag_api.py
@@ -794,8 +769,7 @@ def prepare_stage4_request(user_id: int, kpi_row: dict, alerts_list: list,
         # Stage 2 profile (patient context)
         "stage2_profile": stage2_profile.copy() if isinstance(stage2_profile, dict) else None,
         
-        # Stage 2 predictions (if available)
-        "prediction_data": pred_data.copy() if isinstance(pred_data, dict) else None,
+        # Risk assessment from Stage 2
         "triage_data": triage_data.copy() if isinstance(triage_data, dict) else None,
     }
     return request_payload
@@ -840,7 +814,6 @@ if st.button("Generate Summary for Doctor"):
         user_id=int(selected_user),
         kpi_row=u,
         alerts_list=alerts,
-        pred_data=prediction_data,
         triage_data=triage_data,
         stage2_profile=stage2_profile,
         evidence_query=evidence_query
