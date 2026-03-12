@@ -1,4 +1,7 @@
-.env
-chroma_db/
-.venv/
 __pycache__/
+*.pyc
+.DS_Store
+*.egg-info/
+.streamlit/
+chroma_db_user/
+data_raw/
