@@ -3,5 +3,6 @@ __pycache__/
 .DS_Store
 *.egg-info/
 .streamlit/
+!.streamlit/config.toml
 chroma_db_user/
 data_raw/
