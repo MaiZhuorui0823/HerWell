@@ -1,0 +1,726 @@
+[
+  {
+    "id": "pop_phase_menstrual_symptoms",
+    "metadata": {
+      "doc_type": "phase_symptoms",
+      "phase": "Menstrual",
+      "n_records": 7581,
+      "n_users": 292
+    },
+    "text": "POPULATION SUMMARY --- Menstrual Phase: Symptom Profile\nBased on 7,581 daily records (1,079 real + 6,502 synthetic), 292 users.\n\nSYMPTOM SCORES (0=none, 2=low, 3=moderate, 4=high, 5=severe):\n  pain_score: mean=1.59/5, std=1.76 | distribution: none 50.9%, low 12.8%, moderate 17.6%, high 12.5%, severe 6.2%\n  headache_score: mean=1.43/5, std=1.64 | distribution: none 52.9%, low 16.3%, moderate 16.8%, high 10.3%, severe 3.7%\n  fatigue_score: mean=2.50/5, std=1.64 | distribution: none 24.4%, low 16.7%, moderate 27.5%, high 23.0%, severe 8.5%\n  sleep_issue_score: mean=1.92/5, std=1.60 | distribution: none 34.8%, low 25.8%, moderate 22.9%, high 11.0%, severe 5.5%\n  mood_instability: mean=1.59/5, std=1.64 | distribution: none 47.5%, low 15.1%, moderate 24.0%, high 10.0%, severe 3.4%\n  stress_score: mean=2.57/5, std=1.56 | distribution: none 21.2%, low 17.2%, moderate 32.3%, high 21.2%, severe 8.1%\n  bloating_score: mean=1.92/5, std=1.69 | distribution: none 39.3%, low 15.1%, moderate 25.8%, high 14.8%, severe 5.0%\n  symptom_burden_score (mean of 6): mean=2.02/5, std=0.97\n  pain_trend (5-day rolling avg): mean=0.18/5\n\nADDITIONAL SYMPTOMS (0-4 scale):\n  appetite: mean=1.91/4\n  exercise_level: mean=1.34/4\n  sore_breasts: mean=0.59/4\n  food_cravings: mean=1.20/4\n  indigestion: mean=1.05/4\n"
+  },
+  {
+    "id": "pop_phase_menstrual_hormones",
+    "metadata": {
+      "doc_type": "phase_hormones",
+      "phase": "Menstrual",
+      "n_records": 7581
+    },
+    "text": "POPULATION SUMMARY --- Menstrual Phase: Hormones & Bleeding\nBased on 7,581 records (1,079 real + 6,502 synthetic), 292 users.\n\nHORMONES (within-phase z-scores, 0=phase average):\n  lh_phase_z: mean=-0.00, std=1.00, anomaly_rate=2.7%\n  estrogen_phase_z: mean=-0.00, std=1.00, anomaly_rate=3.0%\n  pdg_phase_z: mean=-0.00, std=1.00, anomaly_rate=1.2%\n  hormone_anomaly_flag rate: 6.7%\n\nBLEEDING:\n  bleeding_present: 44.0% of days\n  heavy_flow_flag: 13.3% of days\n  avg bleeding_duration (when present): 1.69 days\n  flow_volume_num: mean=2.35/6 (0=none, 3=moderate, 6=heavy)\n"
+  },
+  {
+    "id": "pop_phase_menstrual_wearable",
+    "metadata": {
+      "doc_type": "phase_wearable",
+      "phase": "Menstrual",
+      "n_records": 7581
+    },
+    "text": "POPULATION SUMMARY --- Menstrual Phase: Wearable Signals\nBased on 7,581 records (1,079 real + 6,502 synthetic), 292 users.\n\nWEARABLE MEASUREMENTS:\n  resting_hr: mean=59.35, std=24.17, p25=43.09, p75=74.62, null_rate=4.3%\n  hrv_rmssd: mean=59.36, std=29.20, p25=38.36, p75=78.92, null_rate=15.1%\n  temp_diff_baseline: mean=-0.24, std=0.74, p25=0.00, p75=0.00, null_rate=9.0%\n  nightly_temp: mean=33.82, std=0.94, p25=33.21, p75=34.45, null_rate=21.0%\n  sleep_score: mean=77.62, std=8.01, p25=72.00, p75=83.00, null_rate=10.4%\n  sleep_duration_min: mean=291.61, std=237.33, p25=0.00, p75=488.00, null_rate=65.9%\n  deep_sleep_min: mean=76.60, std=25.78, p25=59.00, p75=94.00, null_rate=10.8%\n  rem_sleep_min: mean=252.38, std=197.78, p25=89.00, p75=389.25, null_rate=9.7%\n  sleep_efficiency: mean=92.91, std=5.86, p25=89.50, p75=97.40, null_rate=10.3%\n"
+  },
+  {
+    "id": "pop_phase_menstrual_cycle",
+    "metadata": {
+      "doc_type": "phase_cycle",
+      "phase": "Menstrual",
+      "n_records": 7581
+    },
+    "text": "POPULATION SUMMARY --- Menstrual Phase: Cycle Metrics\nBased on 7,581 records (1,079 real + 6,502 synthetic), 292 users.\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=31.70 days, std=3.17, p10=28.00, p50=32.00, p90=36.00\n  days_since_last_period: mean=2.24, p10=0.00, p50=2.00, p90=5.00\n  cycle_gt_35_flag (long cycle): 8.5%\n  cycle_lt_21_flag (short cycle): 0.2%\n  cycle_irregular_flag (variation >7d): 1.1%\n  cycle_length_variation: mean=2.38 days\n  early_menarche_flag (<11y): 13.0%\n  menstrual_health_literacy_num (1=Low,2=Mod,3=High): mean=2.18\n  sexual_activity_flag: 38.4% active\n"
+  },
+  {
+    "id": "pop_phase_follicular_symptoms",
+    "metadata": {
+      "doc_type": "phase_symptoms",
+      "phase": "Follicular",
+      "n_records": 13305,
+      "n_users": 292
+    },
+    "text": "POPULATION SUMMARY --- Follicular Phase: Symptom Profile\nBased on 13,305 daily records (1,386 real + 11,919 synthetic), 292 users.\n\nSYMPTOM SCORES (0=none, 2=low, 3=moderate, 4=high, 5=severe):\n  pain_score: mean=0.32/5, std=0.91 | distribution: none 87.6%, low 6.7%, moderate 4.3%, high 0.8%, severe 0.6%\n  headache_score: mean=1.31/5, std=1.60 | distribution: none 56.2%, low 16.2%, moderate 15.1%, high 9.4%, severe 3.1%\n  fatigue_score: mean=2.33/5, std=1.66 | distribution: none 28.2%, low 17.0%, moderate 27.4%, high 19.8%, severe 7.6%\n  sleep_issue_score: mean=1.76/5, std=1.65 | distribution: none 41.1%, low 23.5%, moderate 18.7%, high 10.9%, severe 5.8%\n  mood_instability: mean=1.25/5, std=1.53 | distribution: none 56.3%, low 18.0%, moderate 16.7%, high 6.4%, severe 2.6%\n  stress_score: mean=2.52/5, std=1.60 | distribution: none 22.8%, low 16.9%, moderate 32.4%, high 18.1%, severe 9.8%\n  bloating_score: mean=1.20/5, std=1.50 | distribution: none 57.4%, low 19.5%, moderate 13.7%, high 7.8%, severe 1.7%\n  symptom_burden_score (mean of 6): mean=1.56/5, std=0.92\n  pain_trend (5-day rolling avg): mean=-0.11/5\n\nADDITIONAL SYMPTOMS (0-4 scale):\n  appetite: mean=1.85/4\n  exercise_level: mean=1.41/4\n  sore_breasts: mean=0.15/4\n  food_cravings: mean=1.10/4\n  indigestion: mean=0.75/4\n"
+  },
+  {
+    "id": "pop_phase_follicular_hormones",
+    "metadata": {
+      "doc_type": "phase_hormones",
+      "phase": "Follicular",
+      "n_records": 13305
+    },
+    "text": "POPULATION SUMMARY --- Follicular Phase: Hormones & Bleeding\nBased on 13,305 records (1,386 real + 11,919 synthetic), 292 users.\n\nHORMONES (within-phase z-scores, 0=phase average):\n  lh_phase_z: mean=0.00, std=1.00, anomaly_rate=2.9%\n  estrogen_phase_z: mean=-0.00, std=1.00, anomaly_rate=2.8%\n  pdg_phase_z: mean=0.00, std=1.00, anomaly_rate=1.3%\n  hormone_anomaly_flag rate: 6.8%\n\nBLEEDING:\n  bleeding_present: 11.1% of days\n  heavy_flow_flag: 0.2% of days\n  avg bleeding_duration (when present): 1.57 days\n  flow_volume_num: mean=0.30/6 (0=none, 3=moderate, 6=heavy)\n"
+  },
+  {
+    "id": "pop_phase_follicular_wearable",
+    "metadata": {
+      "doc_type": "phase_wearable",
+      "phase": "Follicular",
+      "n_records": 13305
+    },
+    "text": "POPULATION SUMMARY --- Follicular Phase: Wearable Signals\nBased on 13,305 records (1,386 real + 11,919 synthetic), 292 users.\n\nWEARABLE MEASUREMENTS:\n  resting_hr: mean=60.97, std=21.76, p25=46.23, p75=75.16, null_rate=1.8%\n  hrv_rmssd: mean=57.04, std=27.79, p25=37.67, p75=75.81, null_rate=14.6%\n  temp_diff_baseline: mean=-0.18, std=0.63, p25=0.00, p75=0.00, null_rate=9.3%\n  nightly_temp: mean=33.63, std=0.80, p25=33.09, p75=34.18, null_rate=19.4%\n  sleep_score: mean=77.45, std=8.65, p25=72.00, p75=83.00, null_rate=10.5%\n  sleep_duration_min: mean=286.82, std=240.07, p25=0.00, p75=490.00, null_rate=64.5%\n  deep_sleep_min: mean=79.73, std=28.02, p25=61.00, p75=98.00, null_rate=10.4%\n  rem_sleep_min: mean=245.29, std=192.35, p25=85.00, p75=377.00, null_rate=10.0%\n  sleep_efficiency: mean=92.77, std=6.14, p25=89.10, p75=97.70, null_rate=9.9%\n"
+  },
+  {
+    "id": "pop_phase_follicular_cycle",
+    "metadata": {
+      "doc_type": "phase_cycle",
+      "phase": "Follicular",
+      "n_records": 13305
+    },
+    "text": "POPULATION SUMMARY --- Follicular Phase: Cycle Metrics\nBased on 13,305 records (1,386 real + 11,919 synthetic), 292 users.\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=31.85 days, std=3.03, p10=28.00, p50=32.00, p90=36.00\n  days_since_last_period: mean=9.44, p10=5.00, p50=9.00, p90=14.00\n  cycle_gt_35_flag (long cycle): 8.7%\n  cycle_lt_21_flag (short cycle): 0.0%\n  cycle_irregular_flag (variation >7d): 1.3%\n  cycle_length_variation: mean=2.37 days\n  early_menarche_flag (<11y): 12.2%\n  menstrual_health_literacy_num (1=Low,2=Mod,3=High): mean=2.18\n  sexual_activity_flag: 37.7% active\n"
+  },
+  {
+    "id": "pop_phase_fertility_symptoms",
+    "metadata": {
+      "doc_type": "phase_symptoms",
+      "phase": "Fertility",
+      "n_records": 6077,
+      "n_users": 292
+    },
+    "text": "POPULATION SUMMARY --- Fertility Phase: Symptom Profile\nBased on 6,077 daily records (1,281 real + 4,796 synthetic), 292 users.\n\nSYMPTOM SCORES (0=none, 2=low, 3=moderate, 4=high, 5=severe):\n  pain_score: mean=0.48/5, std=1.09 | distribution: none 82.7%, low 7.3%, moderate 7.4%, high 2.0%, severe 0.6%\n  headache_score: mean=1.07/5, std=1.48 | distribution: none 62.6%, low 14.4%, moderate 16.2%, high 4.2%, severe 2.5%\n  fatigue_score: mean=2.26/5, std=1.68 | distribution: none 30.3%, low 16.9%, moderate 26.3%, high 19.3%, severe 7.2%\n  sleep_issue_score: mean=1.91/5, std=1.70 | distribution: none 38.3%, low 21.3%, moderate 21.3%, high 11.2%, severe 8.0%\n  mood_instability: mean=1.25/5, std=1.55 | distribution: none 57.6%, low 14.8%, moderate 17.5%, high 8.1%, severe 1.9%\n  stress_score: mean=2.46/5, std=1.61 | distribution: none 24.2%, low 17.9%, moderate 30.7%, high 18.6%, severe 8.6%\n  bloating_score: mean=1.31/5, std=1.58 | distribution: none 55.6%, low 16.7%, moderate 16.2%, high 8.8%, severe 2.8%\n  symptom_burden_score (mean of 6): mean=1.61/5, std=0.96\n  pain_trend (5-day rolling avg): mean=0.03/5\n\nADDITIONAL SYMPTOMS (0-4 scale):\n  appetite: mean=1.92/4\n  exercise_level: mean=1.38/4\n  sore_breasts: mean=0.25/4\n  food_cravings: mean=1.01/4\n  indigestion: mean=0.72/4\n"
+  },
+  {
+    "id": "pop_phase_fertility_hormones",
+    "metadata": {
+      "doc_type": "phase_hormones",
+      "phase": "Fertility",
+      "n_records": 6077
+    },
+    "text": "POPULATION SUMMARY --- Fertility Phase: Hormones & Bleeding\nBased on 6,077 records (1,281 real + 4,796 synthetic), 292 users.\n\nHORMONES (within-phase z-scores, 0=phase average):\n  lh_phase_z: mean=-0.00, std=1.00, anomaly_rate=4.1%\n  estrogen_phase_z: mean=-0.00, std=1.00, anomaly_rate=3.5%\n  pdg_phase_z: mean=0.00, std=1.00, anomaly_rate=1.2%\n  hormone_anomaly_flag rate: 8.1%\n\nBLEEDING:\n  bleeding_present: 2.9% of days\n  heavy_flow_flag: 0.2% of days\n  avg bleeding_duration (when present): 1.70 days\n  flow_volume_num: mean=0.09/6 (0=none, 3=moderate, 6=heavy)\n"
+  },
+  {
+    "id": "pop_phase_fertility_wearable",
+    "metadata": {
+      "doc_type": "phase_wearable",
+      "phase": "Fertility",
+      "n_records": 6077
+    },
+    "text": "POPULATION SUMMARY --- Fertility Phase: Wearable Signals\nBased on 6,077 records (1,281 real + 4,796 synthetic), 292 users.\n\nWEARABLE MEASUREMENTS:\n  resting_hr: mean=61.87, std=23.39, p25=46.49, p75=76.19, null_rate=4.5%\n  hrv_rmssd: mean=53.97, std=28.07, p25=33.90, p75=72.65, null_rate=15.4%\n  temp_diff_baseline: mean=-0.36, std=0.84, p25=0.00, p75=0.00, null_rate=8.7%\n  nightly_temp: mean=33.75, std=0.91, p25=33.14, p75=34.36, null_rate=19.7%\n  sleep_score: mean=76.43, std=8.70, p25=71.00, p75=82.00, null_rate=10.3%\n  sleep_duration_min: mean=301.02, std=231.51, p25=0.00, p75=483.00, null_rate=65.3%\n  deep_sleep_min: mean=78.36, std=26.75, p25=61.00, p75=96.00, null_rate=10.9%\n  rem_sleep_min: mean=259.81, std=206.36, p25=87.00, p75=409.00, null_rate=9.7%\n  sleep_efficiency: mean=93.04, std=6.04, p25=89.90, p75=97.20, null_rate=10.4%\n"
+  },
+  {
+    "id": "pop_phase_fertility_cycle",
+    "metadata": {
+      "doc_type": "phase_cycle",
+      "phase": "Fertility",
+      "n_records": 6077
+    },
+    "text": "POPULATION SUMMARY --- Fertility Phase: Cycle Metrics\nBased on 6,077 records (1,281 real + 4,796 synthetic), 292 users.\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=31.35 days, std=3.30, p10=27.00, p50=32.00, p90=35.00\n  days_since_last_period: mean=16.08, p10=12.00, p50=16.00, p90=20.00\n  cycle_gt_35_flag (long cycle): 7.9%\n  cycle_lt_21_flag (short cycle): 0.2%\n  cycle_irregular_flag (variation >7d): 1.5%\n  cycle_length_variation: mean=2.45 days\n  early_menarche_flag (<11y): 12.2%\n  menstrual_health_literacy_num (1=Low,2=Mod,3=High): mean=2.19\n  sexual_activity_flag: 38.1% active\n"
+  },
+  {
+    "id": "pop_phase_luteal_symptoms",
+    "metadata": {
+      "doc_type": "phase_symptoms",
+      "phase": "Luteal",
+      "n_records": 16821,
+      "n_users": 292
+    },
+    "text": "POPULATION SUMMARY --- Luteal Phase: Symptom Profile\nBased on 16,821 daily records (1,912 real + 14,909 synthetic), 292 users.\n\nSYMPTOM SCORES (0=none, 2=low, 3=moderate, 4=high, 5=severe):\n  pain_score: mean=0.68/5, std=1.28 | distribution: none 75.9%, low 9.3%, moderate 10.3%, high 3.5%, severe 1.0%\n  headache_score: mean=1.06/5, std=1.49 | distribution: none 63.4%, low 14.5%, moderate 13.5%, high 6.7%, severe 1.9%\n  fatigue_score: mean=2.33/5, std=1.62 | distribution: none 27.2%, low 17.7%, moderate 28.7%, high 20.6%, severe 5.8%\n  sleep_issue_score: mean=1.77/5, std=1.63 | distribution: none 40.2%, low 23.6%, moderate 20.1%, high 10.8%, severe 5.2%\n  mood_instability: mean=1.33/5, std=1.58 | distribution: none 54.9%, low 16.2%, moderate 17.6%, high 8.7%, severe 2.6%\n  stress_score: mean=2.37/5, std=1.62 | distribution: none 26.4%, low 16.6%, moderate 32.5%, high 16.7%, severe 7.8%\n  bloating_score: mean=1.29/5, std=1.59 | distribution: none 57.2%, low 14.2%, moderate 16.3%, high 10.2%, severe 2.1%\n  symptom_burden_score (mean of 6): mean=1.63/5, std=0.94\n  pain_trend (5-day rolling avg): mean=0.01/5\n\nADDITIONAL SYMPTOMS (0-4 scale):\n  appetite: mean=1.95/4\n  exercise_level: mean=1.42/4\n  sore_breasts: mean=0.49/4\n  food_cravings: mean=1.14/4\n  indigestion: mean=0.73/4\n"
+  },
+  {
+    "id": "pop_phase_luteal_hormones",
+    "metadata": {
+      "doc_type": "phase_hormones",
+      "phase": "Luteal",
+      "n_records": 16821
+    },
+    "text": "POPULATION SUMMARY --- Luteal Phase: Hormones & Bleeding\nBased on 16,821 records (1,912 real + 14,909 synthetic), 292 users.\n\nHORMONES (within-phase z-scores, 0=phase average):\n  lh_phase_z: mean=0.00, std=1.00, anomaly_rate=3.2%\n  estrogen_phase_z: mean=0.00, std=1.00, anomaly_rate=3.0%\n  pdg_phase_z: mean=-0.00, std=1.00, anomaly_rate=1.2%\n  hormone_anomaly_flag rate: 7.2%\n\nBLEEDING:\n  bleeding_present: 2.1% of days\n  heavy_flow_flag: 0.2% of days\n  avg bleeding_duration (when present): 1.16 days\n  flow_volume_num: mean=0.07/6 (0=none, 3=moderate, 6=heavy)\n"
+  },
+  {
+    "id": "pop_phase_luteal_wearable",
+    "metadata": {
+      "doc_type": "phase_wearable",
+      "phase": "Luteal",
+      "n_records": 16821
+    },
+    "text": "POPULATION SUMMARY --- Luteal Phase: Wearable Signals\nBased on 16,821 records (1,912 real + 14,909 synthetic), 292 users.\n\nWEARABLE MEASUREMENTS:\n  resting_hr: mean=60.79, std=25.40, p25=43.03, p75=77.03, null_rate=3.9%\n  hrv_rmssd: mean=52.96, std=27.04, p25=33.99, p75=70.72, null_rate=14.7%\n  temp_diff_baseline: mean=-0.17, std=0.61, p25=0.00, p75=0.00, null_rate=9.1%\n  nightly_temp: mean=33.93, std=0.95, p25=33.30, p75=34.59, null_rate=20.5%\n  sleep_score: mean=76.80, std=8.49, p25=71.00, p75=83.00, null_rate=10.9%\n  sleep_duration_min: mean=289.04, std=241.31, p25=0.00, p75=494.00, null_rate=67.0%\n  deep_sleep_min: mean=78.81, std=27.71, p25=60.00, p75=97.00, null_rate=10.6%\n  rem_sleep_min: mean=257.71, std=199.19, p25=92.00, p75=392.00, null_rate=10.0%\n  sleep_efficiency: mean=91.54, std=7.70, p25=87.10, p75=97.90, null_rate=10.1%\n"
+  },
+  {
+    "id": "pop_phase_luteal_cycle",
+    "metadata": {
+      "doc_type": "phase_cycle",
+      "phase": "Luteal",
+      "n_records": 16821
+    },
+    "text": "POPULATION SUMMARY --- Luteal Phase: Cycle Metrics\nBased on 16,821 records (1,912 real + 14,909 synthetic), 292 users.\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=31.58 days, std=2.97, p10=28.00, p50=32.00, p90=35.00\n  days_since_last_period: mean=24.65, p10=18.00, p50=24.00, p90=31.00\n  cycle_gt_35_flag (long cycle): 8.1%\n  cycle_lt_21_flag (short cycle): 0.1%\n  cycle_irregular_flag (variation >7d): 0.7%\n  cycle_length_variation: mean=2.39 days\n  early_menarche_flag (<11y): 12.4%\n  menstrual_health_literacy_num (1=Low,2=Mod,3=High): mean=2.17\n  sexual_activity_flag: 37.8% active\n"
+  },
+  {
+    "id": "pop_cycle_day_01",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 1,
+      "n_records": 1513
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 1\nBased on 1,513 records (192 real + 1,321 synthetic), 292 users.\nTypical phase at day 1: Menstrual 99.7%, Follicular 0.3%\n\nKEY METRICS:\n  pain_score: mean=1.64, std=1.77, p25=0.00, p75=3.00\n  fatigue_score: mean=2.53, std=1.64, p25=2.00, p75=4.00\n  mood_instability: mean=1.62, std=1.65, p25=0.00, p75=3.00\n  bloating_score: mean=1.92, std=1.69, p25=0.00, p75=3.00\n  stress_score: mean=2.59, std=1.51, p25=2.00, p75=4.00\n  headache_score: mean=1.44, std=1.66, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.88, std=1.62, p25=0.00, p75=3.00\n  symptom_burden_score: mean=2.02, std=0.97, p25=1.33, p75=2.67\n  bleeding_present: mean=0.45, std=0.50, p25=0.00, p75=1.00\n  heavy_flow_flag: mean=0.14, std=0.35, p25=0.00, p75=0.00\n  flow_volume_num: mean=2.42, std=1.71, p25=1.00, p75=3.00\n  lh_phase_z: mean=0.01, std=0.99, p25=-0.75, p75=0.69\n  estrogen_phase_z: mean=-0.01, std=1.00, p25=-0.72, p75=0.65\n  pdg_phase_z: mean=-0.02, std=1.01, p25=-0.85, p75=0.54\n  hormone_anomaly_flag: mean=0.07, std=0.26, p25=0.00, p75=0.00\n  resting_hr: mean=59.30, std=24.47, p25=42.16, p75=75.39\n  hrv_rmssd: mean=59.37, std=28.47, p25=40.40, p75=77.43\n  temp_diff_baseline: mean=-0.19, std=0.66, p25=0.00, p75=0.00\n  sleep_score: mean=77.65, std=8.06, p25=72.00, p75=83.00\n  sleep_duration_min: mean=290.77, std=236.33, p25=0.00, p75=483.75\n  sleep_efficiency: mean=92.87, std=5.91, p25=89.50, p75=97.40\n  deep_sleep_min: mean=76.49, std=25.88, p25=59.00, p75=94.00\n"
+  },
+  {
+    "id": "pop_cycle_day_02",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 2,
+      "n_records": 1498
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 2\nBased on 1,498 records (189 real + 1,309 synthetic), 292 users.\nTypical phase at day 2: Menstrual 99.3%, Follicular 0.7%\n\nKEY METRICS:\n  pain_score: mean=1.51, std=1.71, p25=0.00, p75=3.00\n  fatigue_score: mean=2.49, std=1.63, p25=2.00, p75=4.00\n  mood_instability: mean=1.60, std=1.62, p25=0.00, p75=3.00\n  bloating_score: mean=1.98, std=1.69, p25=0.00, p75=3.00\n  stress_score: mean=2.48, std=1.57, p25=2.00, p75=4.00\n  headache_score: mean=1.38, std=1.65, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.87, std=1.58, p25=0.00, p75=3.00\n  symptom_burden_score: mean=2.01, std=0.96, p25=1.40, p75=2.67\n  bleeding_present: mean=0.46, std=0.50, p25=0.00, p75=1.00\n  heavy_flow_flag: mean=0.15, std=0.36, p25=0.00, p75=0.00\n  flow_volume_num: mean=2.48, std=1.71, p25=1.00, p75=4.00\n  lh_phase_z: mean=-0.02, std=1.04, p25=-0.75, p75=0.63\n  estrogen_phase_z: mean=-0.02, std=0.99, p25=-0.73, p75=0.61\n  pdg_phase_z: mean=0.01, std=1.00, p25=-0.84, p75=0.64\n  hormone_anomaly_flag: mean=0.06, std=0.24, p25=0.00, p75=0.00\n  resting_hr: mean=58.76, std=23.89, p25=42.55, p75=74.16\n  hrv_rmssd: mean=59.58, std=29.60, p25=37.73, p75=79.05\n  temp_diff_baseline: mean=-0.22, std=0.69, p25=0.00, p75=0.00\n  sleep_score: mean=77.58, std=8.36, p25=72.00, p75=83.00\n  sleep_duration_min: mean=295.38, std=234.75, p25=0.00, p75=492.25\n  sleep_efficiency: mean=92.99, std=5.78, p25=89.25, p75=97.60\n  deep_sleep_min: mean=76.02, std=25.76, p25=59.00, p75=94.00\n"
+  },
+  {
+    "id": "pop_cycle_day_03",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 3,
+      "n_records": 1487
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 3\nBased on 1,487 records (187 real + 1,300 synthetic), 292 users.\nTypical phase at day 3: Menstrual 80.2%, Follicular 19.8%\n\nKEY METRICS:\n  pain_score: mean=1.32, std=1.71, p25=0.00, p75=3.00\n  fatigue_score: mean=2.39, std=1.61, p25=0.00, p75=4.00\n  mood_instability: mean=1.52, std=1.61, p25=0.00, p75=3.00\n  bloating_score: mean=1.72, std=1.67, p25=0.00, p75=3.00\n  stress_score: mean=2.59, std=1.57, p25=2.00, p75=4.00\n  headache_score: mean=1.38, std=1.64, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.94, std=1.61, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.93, std=0.99, p25=1.25, p75=2.67\n  bleeding_present: mean=0.39, std=0.49, p25=0.00, p75=1.00\n  heavy_flow_flag: mean=0.11, std=0.31, p25=0.00, p75=0.00\n  flow_volume_num: mean=2.08, std=1.76, p25=0.00, p75=3.00\n  lh_phase_z: mean=0.00, std=0.97, p25=-0.71, p75=0.63\n  estrogen_phase_z: mean=-0.02, std=0.99, p25=-0.74, p75=0.62\n  pdg_phase_z: mean=0.04, std=1.05, p25=-0.85, p75=0.76\n  hormone_anomaly_flag: mean=0.06, std=0.24, p25=0.00, p75=0.00\n  resting_hr: mean=60.36, std=24.00, p25=43.86, p75=75.52\n  hrv_rmssd: mean=59.85, std=29.25, p25=38.56, p75=80.91\n  temp_diff_baseline: mean=-0.21, std=0.69, p25=0.00, p75=0.00\n  sleep_score: mean=77.35, std=7.93, p25=72.00, p75=83.00\n  sleep_duration_min: mean=289.79, std=240.66, p25=0.00, p75=487.00\n  sleep_efficiency: mean=92.88, std=6.00, p25=89.60, p75=97.30\n  deep_sleep_min: mean=76.31, std=26.18, p25=58.00, p75=94.00\n"
+  },
+  {
+    "id": "pop_cycle_day_04",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 4,
+      "n_records": 1478
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 4\nBased on 1,478 records (186 real + 1,292 synthetic), 292 users.\nTypical phase at day 4: Menstrual 61.6%, Follicular 38.3%, Fertility 0.1%\n\nKEY METRICS:\n  pain_score: mean=1.11, std=1.63, p25=0.00, p75=2.00\n  fatigue_score: mean=2.45, std=1.67, p25=0.00, p75=4.00\n  mood_instability: mean=1.37, std=1.60, p25=0.00, p75=3.00\n  bloating_score: mean=1.64, std=1.70, p25=0.00, p75=3.00\n  stress_score: mean=2.50, std=1.60, p25=2.00, p75=4.00\n  headache_score: mean=1.39, std=1.63, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.79, std=1.64, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.83, std=0.96, p25=1.17, p75=2.50\n  bleeding_present: mean=0.33, std=0.47, p25=0.00, p75=1.00\n  heavy_flow_flag: mean=0.08, std=0.27, p25=0.00, p75=0.00\n  flow_volume_num: mean=1.63, std=1.71, p25=0.00, p75=3.00\n  lh_phase_z: mean=-0.01, std=1.01, p25=-0.76, p75=0.64\n  estrogen_phase_z: mean=0.03, std=0.99, p25=-0.70, p75=0.67\n  pdg_phase_z: mean=-0.03, std=0.95, p25=-0.85, p75=0.57\n  hormone_anomaly_flag: mean=0.08, std=0.26, p25=0.00, p75=0.00\n  resting_hr: mean=61.56, std=23.91, p25=45.71, p75=77.03\n  hrv_rmssd: mean=58.96, std=28.29, p25=38.70, p75=78.65\n  temp_diff_baseline: mean=-0.22, std=0.72, p25=0.00, p75=0.00\n  sleep_score: mean=77.49, std=8.25, p25=72.00, p75=83.00\n  sleep_duration_min: mean=278.14, std=236.42, p25=0.00, p75=480.00\n  sleep_efficiency: mean=92.83, std=5.98, p25=89.20, p75=97.60\n  deep_sleep_min: mean=78.07, std=26.83, p25=59.00, p75=96.00\n"
+  },
+  {
+    "id": "pop_cycle_day_05",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 5,
+      "n_records": 1464
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 5\nBased on 1,464 records (180 real + 1,284 synthetic), 292 users.\nTypical phase at day 5: Follicular 58.4%, Menstrual 41.5%, Fertility 0.1%\n\nKEY METRICS:\n  pain_score: mean=0.80, std=1.46, p25=0.00, p75=2.00\n  fatigue_score: mean=2.42, std=1.68, p25=0.00, p75=4.00\n  mood_instability: mean=1.31, std=1.52, p25=0.00, p75=3.00\n  bloating_score: mean=1.42, std=1.58, p25=0.00, p75=3.00\n  stress_score: mean=2.46, std=1.60, p25=2.00, p75=4.00\n  headache_score: mean=1.30, std=1.62, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.91, std=1.63, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.71, std=0.93, p25=1.00, p75=2.33\n  bleeding_present: mean=0.28, std=0.45, p25=0.00, p75=1.00\n  heavy_flow_flag: mean=0.05, std=0.21, p25=0.00, p75=0.00\n  flow_volume_num: mean=1.19, std=1.53, p25=0.00, p75=2.00\n  lh_phase_z: mean=-0.00, std=0.99, p25=-0.78, p75=0.70\n  estrogen_phase_z: mean=-0.05, std=0.98, p25=-0.77, p75=0.58\n  pdg_phase_z: mean=-0.04, std=1.02, p25=-0.85, p75=0.56\n  hormone_anomaly_flag: mean=0.06, std=0.25, p25=0.00, p75=0.00\n  resting_hr: mean=60.68, std=22.91, p25=45.00, p75=75.94\n  hrv_rmssd: mean=58.47, std=28.01, p25=40.27, p75=76.14\n  temp_diff_baseline: mean=-0.23, std=0.76, p25=0.00, p75=0.00\n  sleep_score: mean=78.02, std=8.59, p25=72.00, p75=84.00\n  sleep_duration_min: mean=308.64, std=242.51, p25=0.00, p75=513.00\n  sleep_efficiency: mean=92.75, std=5.91, p25=89.60, p75=97.30\n  deep_sleep_min: mean=79.07, std=26.33, p25=61.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_06",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 6,
+      "n_records": 1454
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 6\nBased on 1,454 records (179 real + 1,275 synthetic), 292 users.\nTypical phase at day 6: Follicular 78.1%, Menstrual 21.5%, Fertility 0.5%\n\nKEY METRICS:\n  pain_score: mean=0.54, std=1.20, p25=0.00, p75=0.00\n  fatigue_score: mean=2.31, std=1.64, p25=0.00, p75=4.00\n  mood_instability: mean=1.29, std=1.56, p25=0.00, p75=3.00\n  bloating_score: mean=1.31, std=1.58, p25=0.00, p75=3.00\n  stress_score: mean=2.57, std=1.57, p25=2.00, p75=4.00\n  headache_score: mean=1.34, std=1.62, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.77, std=1.61, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.64, std=0.94, p25=1.00, p75=2.25\n  bleeding_present: mean=0.19, std=0.39, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.02, std=0.16, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.73, std=1.26, p25=0.00, p75=1.00\n  lh_phase_z: mean=-0.01, std=0.98, p25=-0.77, p75=0.66\n  estrogen_phase_z: mean=-0.00, std=0.97, p25=-0.71, p75=0.63\n  pdg_phase_z: mean=0.03, std=0.95, p25=-0.81, p75=0.67\n  hormone_anomaly_flag: mean=0.07, std=0.25, p25=0.00, p75=0.00\n  resting_hr: mean=60.54, std=22.54, p25=45.01, p75=74.84\n  hrv_rmssd: mean=57.23, std=27.33, p25=38.39, p75=76.89\n  temp_diff_baseline: mean=-0.21, std=0.69, p25=0.00, p75=0.00\n  sleep_score: mean=77.52, std=8.33, p25=72.00, p75=83.00\n  sleep_duration_min: mean=291.12, std=243.87, p25=0.00, p75=506.00\n  sleep_efficiency: mean=92.83, std=6.09, p25=89.20, p75=97.70\n  deep_sleep_min: mean=78.25, std=27.86, p25=60.00, p75=96.00\n"
+  },
+  {
+    "id": "pop_cycle_day_07",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 7,
+      "n_records": 1448
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 7\nBased on 1,448 records (176 real + 1,272 synthetic), 292 users.\nTypical phase at day 7: Follicular 97.5%, Menstrual 1.9%, Fertility 0.6%\n\nKEY METRICS:\n  pain_score: mean=0.34, std=0.94, p25=0.00, p75=0.00\n  fatigue_score: mean=2.24, std=1.70, p25=0.00, p75=4.00\n  mood_instability: mean=1.28, std=1.55, p25=0.00, p75=3.00\n  bloating_score: mean=1.20, std=1.49, p25=0.00, p75=2.00\n  stress_score: mean=2.48, std=1.59, p25=2.00, p75=4.00\n  headache_score: mean=1.31, std=1.60, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.71, std=1.59, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.53, std=0.93, p25=1.00, p75=2.00\n  bleeding_present: mean=0.12, std=0.32, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.06, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.33, std=0.71, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.02, std=0.98, p25=-0.72, p75=0.67\n  estrogen_phase_z: mean=-0.04, std=1.02, p25=-0.81, p75=0.56\n  pdg_phase_z: mean=0.05, std=1.03, p25=-0.84, p75=0.73\n  hormone_anomaly_flag: mean=0.06, std=0.24, p25=0.00, p75=0.00\n  resting_hr: mean=60.51, std=20.76, p25=46.81, p75=74.84\n  hrv_rmssd: mean=56.59, std=27.64, p25=37.57, p75=74.15\n  temp_diff_baseline: mean=-0.22, std=0.69, p25=0.00, p75=0.00\n  sleep_score: mean=77.51, std=8.44, p25=72.00, p75=83.00\n  sleep_duration_min: mean=278.24, std=233.86, p25=0.00, p75=463.75\n  sleep_efficiency: mean=92.89, std=6.17, p25=89.30, p75=97.85\n  deep_sleep_min: mean=79.38, std=26.88, p25=63.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_08",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 8,
+      "n_records": 1434
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 8\nBased on 1,434 records (175 real + 1,259 synthetic), 292 users.\nTypical phase at day 8: Follicular 97.6%, Fertility 2.0%, Menstrual 0.4%\n\nKEY METRICS:\n  pain_score: mean=0.33, std=0.91, p25=0.00, p75=0.00\n  fatigue_score: mean=2.29, std=1.68, p25=0.00, p75=4.00\n  mood_instability: mean=1.26, std=1.54, p25=0.00, p75=3.00\n  bloating_score: mean=1.22, std=1.52, p25=0.00, p75=2.75\n  stress_score: mean=2.58, std=1.62, p25=2.00, p75=4.00\n  headache_score: mean=1.34, std=1.62, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.73, std=1.67, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.57, std=0.94, p25=1.00, p75=2.12\n  bleeding_present: mean=0.11, std=0.31, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.04, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.31, std=0.70, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.02, std=0.96, p25=-0.77, p75=0.59\n  estrogen_phase_z: mean=-0.04, std=1.00, p25=-0.82, p75=0.60\n  pdg_phase_z: mean=-0.05, std=0.94, p25=-0.84, p75=0.56\n  hormone_anomaly_flag: mean=0.06, std=0.24, p25=0.00, p75=0.00\n  resting_hr: mean=61.29, std=21.91, p25=47.15, p75=75.77\n  hrv_rmssd: mean=57.15, std=28.20, p25=37.31, p75=75.19\n  temp_diff_baseline: mean=-0.21, std=0.67, p25=0.00, p75=0.00\n  sleep_score: mean=77.56, std=8.73, p25=72.00, p75=84.00\n  sleep_duration_min: mean=302.10, std=237.95, p25=0.00, p75=484.00\n  sleep_efficiency: mean=92.66, std=6.02, p25=89.00, p75=97.40\n  deep_sleep_min: mean=80.02, std=27.85, p25=61.00, p75=97.00\n"
+  },
+  {
+    "id": "pop_cycle_day_09",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 9,
+      "n_records": 1426
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 9\nBased on 1,426 records (172 real + 1,254 synthetic), 292 users.\nTypical phase at day 9: Follicular 97.0%, Fertility 2.7%, Menstrual 0.2%\n\nKEY METRICS:\n  pain_score: mean=0.29, std=0.84, p25=0.00, p75=0.00\n  fatigue_score: mean=2.37, std=1.65, p25=0.00, p75=4.00\n  mood_instability: mean=1.26, std=1.52, p25=0.00, p75=3.00\n  bloating_score: mean=1.21, std=1.47, p25=0.00, p75=2.00\n  stress_score: mean=2.53, std=1.60, p25=2.00, p75=4.00\n  headache_score: mean=1.31, std=1.59, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.65, std=1.64, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.56, std=0.96, p25=1.00, p75=2.20\n  bleeding_present: mean=0.11, std=0.31, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.05, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.28, std=0.67, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.05, std=0.98, p25=-0.79, p75=0.57\n  estrogen_phase_z: mean=-0.01, std=1.00, p25=-0.72, p75=0.63\n  pdg_phase_z: mean=-0.07, std=0.98, p25=-0.88, p75=0.54\n  hormone_anomaly_flag: mean=0.07, std=0.25, p25=0.00, p75=0.00\n  resting_hr: mean=61.28, std=21.47, p25=46.91, p75=74.60\n  hrv_rmssd: mean=56.86, std=28.91, p25=35.16, p75=76.56\n  temp_diff_baseline: mean=-0.21, std=0.69, p25=0.00, p75=0.00\n  sleep_score: mean=77.32, std=8.46, p25=72.00, p75=83.00\n  sleep_duration_min: mean=286.95, std=240.67, p25=0.00, p75=500.50\n  sleep_efficiency: mean=92.75, std=6.22, p25=89.40, p75=97.50\n  deep_sleep_min: mean=79.61, std=28.82, p25=60.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_10",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 10,
+      "n_records": 1416
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 10\nBased on 1,416 records (172 real + 1,244 synthetic), 292 users.\nTypical phase at day 10: Follicular 92.3%, Fertility 7.3%, Luteal 0.2%\n\nKEY METRICS:\n  pain_score: mean=0.31, std=0.88, p25=0.00, p75=0.00\n  fatigue_score: mean=2.29, std=1.68, p25=0.00, p75=4.00\n  mood_instability: mean=1.25, std=1.55, p25=0.00, p75=3.00\n  bloating_score: mean=1.19, std=1.50, p25=0.00, p75=2.00\n  stress_score: mean=2.50, std=1.59, p25=2.00, p75=4.00\n  headache_score: mean=1.31, std=1.60, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.80, std=1.64, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.56, std=0.91, p25=1.00, p75=2.17\n  bleeding_present: mean=0.09, std=0.29, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.03, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.26, std=0.65, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.03, std=1.02, p25=-0.73, p75=0.69\n  estrogen_phase_z: mean=0.02, std=1.00, p25=-0.74, p75=0.68\n  pdg_phase_z: mean=-0.03, std=1.02, p25=-0.94, p75=0.60\n  hormone_anomaly_flag: mean=0.07, std=0.26, p25=0.00, p75=0.00\n  resting_hr: mean=60.06, std=21.88, p25=45.38, p75=74.01\n  hrv_rmssd: mean=56.76, std=28.09, p25=36.03, p75=75.27\n  temp_diff_baseline: mean=-0.20, std=0.67, p25=0.00, p75=0.00\n  sleep_score: mean=77.40, std=8.75, p25=72.00, p75=83.00\n  sleep_duration_min: mean=294.03, std=244.61, p25=0.00, p75=510.50\n  sleep_efficiency: mean=92.64, std=6.19, p25=89.20, p75=97.20\n  deep_sleep_min: mean=79.42, std=27.91, p25=60.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_11",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 11,
+      "n_records": 1405
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 11\nBased on 1,405 records (169 real + 1,236 synthetic), 292 users.\nTypical phase at day 11: Follicular 85.6%, Fertility 14.0%, Luteal 0.3%\n\nKEY METRICS:\n  pain_score: mean=0.34, std=0.92, p25=0.00, p75=0.00\n  fatigue_score: mean=2.37, std=1.65, p25=0.00, p75=4.00\n  mood_instability: mean=1.24, std=1.52, p25=0.00, p75=3.00\n  bloating_score: mean=1.24, std=1.52, p25=0.00, p75=2.00\n  stress_score: mean=2.53, std=1.58, p25=2.00, p75=4.00\n  headache_score: mean=1.36, std=1.61, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.80, std=1.68, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.58, std=0.94, p25=1.00, p75=2.25\n  bleeding_present: mean=0.10, std=0.30, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.03, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.26, std=0.62, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.04, std=0.97, p25=-0.80, p75=0.61\n  estrogen_phase_z: mean=-0.00, std=0.99, p25=-0.74, p75=0.64\n  pdg_phase_z: mean=0.01, std=1.01, p25=-0.84, p75=0.64\n  hormone_anomaly_flag: mean=0.06, std=0.23, p25=0.00, p75=0.00\n  resting_hr: mean=61.21, std=21.64, p25=46.35, p75=74.84\n  hrv_rmssd: mean=56.30, std=26.88, p25=36.76, p75=75.44\n  temp_diff_baseline: mean=-0.21, std=0.68, p25=0.00, p75=0.00\n  sleep_score: mean=77.06, std=8.44, p25=72.00, p75=83.00\n  sleep_duration_min: mean=284.22, std=240.26, p25=0.00, p75=493.00\n  sleep_efficiency: mean=92.67, std=6.14, p25=89.10, p75=97.55\n  deep_sleep_min: mean=79.52, std=27.39, p25=61.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_12",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 12,
+      "n_records": 1394
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 12\nBased on 1,394 records (167 real + 1,227 synthetic), 292 users.\nTypical phase at day 12: Follicular 75.8%, Fertility 23.5%, Luteal 0.6%\n\nKEY METRICS:\n  pain_score: mean=0.40, std=1.03, p25=0.00, p75=0.00\n  fatigue_score: mean=2.35, std=1.68, p25=0.00, p75=4.00\n  mood_instability: mean=1.18, std=1.51, p25=0.00, p75=3.00\n  bloating_score: mean=1.19, std=1.50, p25=0.00, p75=2.00\n  stress_score: mean=2.33, std=1.65, p25=0.00, p75=3.25\n  headache_score: mean=1.33, std=1.59, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.86, std=1.65, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.54, std=0.94, p25=1.00, p75=2.00\n  bleeding_present: mean=0.08, std=0.27, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.03, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.21, std=0.58, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.01, std=0.95, p25=-0.75, p75=0.62\n  estrogen_phase_z: mean=-0.00, std=0.97, p25=-0.73, p75=0.62\n  pdg_phase_z: mean=-0.03, std=0.94, p25=-0.85, p75=0.53\n  hormone_anomaly_flag: mean=0.07, std=0.26, p25=0.00, p75=0.00\n  resting_hr: mean=60.97, std=22.29, p25=46.48, p75=74.90\n  hrv_rmssd: mean=56.18, std=28.32, p25=36.03, p75=75.16\n  temp_diff_baseline: mean=-0.21, std=0.67, p25=0.00, p75=0.00\n  sleep_score: mean=77.03, std=8.67, p25=71.00, p75=83.00\n  sleep_duration_min: mean=290.54, std=240.35, p25=0.00, p75=493.00\n  sleep_efficiency: mean=93.15, std=5.94, p25=89.60, p75=98.00\n  deep_sleep_min: mean=78.78, std=27.43, p25=60.00, p75=99.00\n"
+  },
+  {
+    "id": "pop_cycle_day_13",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 13,
+      "n_records": 1383
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 13\nBased on 1,383 records (163 real + 1,220 synthetic), 292 users.\nTypical phase at day 13: Follicular 62.3%, Fertility 35.3%, Luteal 2.4%\n\nKEY METRICS:\n  pain_score: mean=0.40, std=1.00, p25=0.00, p75=0.00\n  fatigue_score: mean=2.35, std=1.62, p25=0.00, p75=4.00\n  mood_instability: mean=1.23, std=1.53, p25=0.00, p75=3.00\n  bloating_score: mean=1.33, std=1.56, p25=0.00, p75=3.00\n  stress_score: mean=2.51, std=1.62, p25=2.00, p75=4.00\n  headache_score: mean=1.25, std=1.60, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.79, std=1.69, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.59, std=0.94, p25=1.00, p75=2.25\n  bleeding_present: mean=0.08, std=0.27, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.05, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.23, std=0.62, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.06, std=0.94, p25=-0.82, p75=0.57\n  estrogen_phase_z: mean=-0.01, std=0.98, p25=-0.76, p75=0.62\n  pdg_phase_z: mean=-0.01, std=0.98, p25=-0.89, p75=0.62\n  hormone_anomaly_flag: mean=0.06, std=0.24, p25=0.00, p75=0.00\n  resting_hr: mean=60.54, std=22.48, p25=45.36, p75=74.64\n  hrv_rmssd: mean=54.86, std=28.11, p25=34.34, p75=74.41\n  temp_diff_baseline: mean=-0.21, std=0.68, p25=0.00, p75=0.00\n  sleep_score: mean=76.92, std=8.64, p25=71.00, p75=83.00\n  sleep_duration_min: mean=289.75, std=240.59, p25=0.00, p75=495.00\n  sleep_efficiency: mean=92.81, std=6.22, p25=89.20, p75=97.80\n  deep_sleep_min: mean=79.35, std=27.74, p25=61.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_14",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 14,
+      "n_records": 1376
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 14\nBased on 1,376 records (160 real + 1,216 synthetic), 292 users.\nTypical phase at day 14: Follicular 48.3%, Fertility 46.2%, Luteal 5.4%\n\nKEY METRICS:\n  pain_score: mean=0.46, std=1.09, p25=0.00, p75=0.00\n  fatigue_score: mean=2.31, std=1.67, p25=0.00, p75=4.00\n  mood_instability: mean=1.19, std=1.56, p25=0.00, p75=3.00\n  bloating_score: mean=1.27, std=1.55, p25=0.00, p75=3.00\n  stress_score: mean=2.45, std=1.62, p25=1.50, p75=4.00\n  headache_score: mean=1.14, std=1.54, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.83, std=1.68, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.61, std=0.95, p25=1.00, p75=2.25\n  bleeding_present: mean=0.06, std=0.24, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.03, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.16, std=0.53, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.02, std=0.97, p25=-0.82, p75=0.58\n  estrogen_phase_z: mean=0.10, std=1.01, p25=-0.63, p75=0.76\n  pdg_phase_z: mean=0.03, std=1.05, p25=-0.82, p75=0.66\n  hormone_anomaly_flag: mean=0.07, std=0.26, p25=0.00, p75=0.00\n  resting_hr: mean=60.93, std=23.48, p25=44.97, p75=76.49\n  hrv_rmssd: mean=55.57, std=27.82, p25=35.36, p75=73.12\n  temp_diff_baseline: mean=-0.21, std=0.67, p25=0.00, p75=0.00\n  sleep_score: mean=76.95, std=9.11, p25=71.00, p75=83.00\n  sleep_duration_min: mean=281.04, std=229.56, p25=0.00, p75=468.00\n  sleep_efficiency: mean=92.96, std=6.02, p25=89.30, p75=97.88\n  deep_sleep_min: mean=80.19, std=27.95, p25=62.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_15",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 15,
+      "n_records": 1364
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 15\nBased on 1,364 records (159 real + 1,205 synthetic), 292 users.\nTypical phase at day 15: Fertility 53.3%, Follicular 34.0%, Luteal 12.7%\n\nKEY METRICS:\n  pain_score: mean=0.45, std=1.07, p25=0.00, p75=0.00\n  fatigue_score: mean=2.30, std=1.67, p25=0.00, p75=4.00\n  mood_instability: mean=1.31, std=1.55, p25=0.00, p75=3.00\n  bloating_score: mean=1.33, std=1.57, p25=0.00, p75=3.00\n  stress_score: mean=2.39, std=1.63, p25=0.00, p75=4.00\n  headache_score: mean=1.17, std=1.53, p25=0.00, p75=3.00\n  sleep_issue_score: mean=1.81, std=1.72, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.60, std=0.95, p25=1.00, p75=2.25\n  bleeding_present: mean=0.05, std=0.23, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.05, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.16, std=0.57, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.05, std=1.04, p25=-0.79, p75=0.71\n  estrogen_phase_z: mean=-0.02, std=0.99, p25=-0.77, p75=0.64\n  pdg_phase_z: mean=0.02, std=0.91, p25=-0.72, p75=0.66\n  hormone_anomaly_flag: mean=0.07, std=0.26, p25=0.00, p75=0.00\n  resting_hr: mean=60.71, std=23.67, p25=44.10, p75=76.01\n  hrv_rmssd: mean=53.43, std=28.06, p25=33.15, p75=70.40\n  temp_diff_baseline: mean=-0.19, std=0.64, p25=0.00, p75=0.00\n  sleep_score: mean=76.47, std=8.56, p25=70.00, p75=82.00\n  sleep_duration_min: mean=288.52, std=236.37, p25=0.00, p75=491.00\n  sleep_efficiency: mean=92.53, std=6.57, p25=88.80, p75=97.70\n  deep_sleep_min: mean=78.70, std=27.11, p25=60.00, p75=97.00\n"
+  },
+  {
+    "id": "pop_cycle_day_16",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 16,
+      "n_records": 1355
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 16\nBased on 1,355 records (156 real + 1,199 synthetic), 292 users.\nTypical phase at day 16: Fertility 57.1%, Luteal 21.8%, Follicular 21.0%\n\nKEY METRICS:\n  pain_score: mean=0.45, std=1.06, p25=0.00, p75=0.00\n  fatigue_score: mean=2.31, std=1.68, p25=0.00, p75=4.00\n  mood_instability: mean=1.21, std=1.53, p25=0.00, p75=3.00\n  bloating_score: mean=1.19, std=1.55, p25=0.00, p75=3.00\n  stress_score: mean=2.42, std=1.59, p25=2.00, p75=4.00\n  headache_score: mean=1.02, std=1.47, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.81, std=1.70, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.57, std=0.93, p25=1.00, p75=2.17\n  bleeding_present: mean=0.04, std=0.19, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.05, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.13, std=0.55, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.01, std=0.98, p25=-0.85, p75=0.59\n  estrogen_phase_z: mean=-0.02, std=0.98, p25=-0.78, p75=0.62\n  pdg_phase_z: mean=0.01, std=1.04, p25=-0.83, p75=0.68\n  hormone_anomaly_flag: mean=0.07, std=0.25, p25=0.00, p75=0.00\n  resting_hr: mean=60.94, std=24.39, p25=43.57, p75=75.93\n  hrv_rmssd: mean=54.72, std=27.79, p25=35.03, p75=73.57\n  temp_diff_baseline: mean=-0.20, std=0.70, p25=0.00, p75=0.00\n  sleep_score: mean=76.60, std=8.70, p25=71.00, p75=83.00\n  sleep_duration_min: mean=265.97, std=237.70, p25=0.00, p75=469.25\n  sleep_efficiency: mean=92.45, std=6.50, p25=88.60, p75=97.50\n  deep_sleep_min: mean=77.19, std=27.50, p25=58.00, p75=95.00\n"
+  },
+  {
+    "id": "pop_cycle_day_17",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 17,
+      "n_records": 1348
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 17\nBased on 1,348 records (156 real + 1,192 synthetic), 292 users.\nTypical phase at day 17: Fertility 54.5%, Luteal 34.6%, Follicular 10.8%\n\nKEY METRICS:\n  pain_score: mean=0.54, std=1.14, p25=0.00, p75=0.00\n  fatigue_score: mean=2.19, std=1.67, p25=0.00, p75=3.00\n  mood_instability: mean=1.31, std=1.59, p25=0.00, p75=3.00\n  bloating_score: mean=1.27, std=1.57, p25=0.00, p75=3.00\n  stress_score: mean=2.43, std=1.62, p25=0.00, p75=4.00\n  headache_score: mean=1.15, std=1.50, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.81, std=1.69, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.58, std=0.95, p25=1.00, p75=2.25\n  bleeding_present: mean=0.03, std=0.18, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.05, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.11, std=0.51, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.01, std=0.96, p25=-0.78, p75=0.60\n  estrogen_phase_z: mean=-0.01, std=1.01, p25=-0.78, p75=0.67\n  pdg_phase_z: mean=0.05, std=1.01, p25=-0.80, p75=0.62\n  hormone_anomaly_flag: mean=0.09, std=0.28, p25=0.00, p75=0.00\n  resting_hr: mean=61.44, std=24.45, p25=44.92, p75=77.16\n  hrv_rmssd: mean=53.62, std=26.92, p25=33.58, p75=72.02\n  temp_diff_baseline: mean=-0.20, std=0.68, p25=0.00, p75=0.00\n  sleep_score: mean=76.90, std=8.50, p25=71.00, p75=83.00\n  sleep_duration_min: mean=295.51, std=243.16, p25=0.00, p75=493.25\n  sleep_efficiency: mean=92.45, std=6.66, p25=88.80, p75=97.70\n  deep_sleep_min: mean=79.66, std=26.78, p25=62.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_18",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 18,
+      "n_records": 1341
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 18\nBased on 1,341 records (154 real + 1,187 synthetic), 292 users.\nTypical phase at day 18: Fertility 47.9%, Luteal 47.0%, Follicular 5.1%\n\nKEY METRICS:\n  pain_score: mean=0.55, std=1.17, p25=0.00, p75=0.00\n  fatigue_score: mean=2.29, std=1.69, p25=0.00, p75=4.00\n  mood_instability: mean=1.36, std=1.61, p25=0.00, p75=3.00\n  bloating_score: mean=1.22, std=1.56, p25=0.00, p75=3.00\n  stress_score: mean=2.46, std=1.65, p25=2.00, p75=4.00\n  headache_score: mean=0.96, std=1.45, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.91, std=1.66, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.64, std=0.97, p25=1.00, p75=2.33\n  bleeding_present: mean=0.03, std=0.16, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.03, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.08, std=0.40, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.03, std=1.00, p25=-0.81, p75=0.69\n  estrogen_phase_z: mean=-0.02, std=0.94, p25=-0.70, p75=0.61\n  pdg_phase_z: mean=0.09, std=1.02, p25=-0.74, p75=0.71\n  hormone_anomaly_flag: mean=0.08, std=0.27, p25=0.00, p75=0.00\n  resting_hr: mean=61.55, std=24.24, p25=45.13, p75=77.49\n  hrv_rmssd: mean=54.88, std=27.38, p25=36.17, p75=73.32\n  temp_diff_baseline: mean=-0.18, std=0.62, p25=0.00, p75=0.00\n  sleep_score: mean=76.43, std=8.55, p25=71.00, p75=82.00\n  sleep_duration_min: mean=305.41, std=248.07, p25=0.00, p75=514.50\n  sleep_efficiency: mean=92.25, std=6.94, p25=88.50, p75=97.70\n  deep_sleep_min: mean=78.63, std=27.59, p25=60.00, p75=97.00\n"
+  },
+  {
+    "id": "pop_cycle_day_19",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 19,
+      "n_records": 1332
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 19\nBased on 1,332 records (150 real + 1,182 synthetic), 292 users.\nTypical phase at day 19: Luteal 61.8%, Fertility 37.1%, Follicular 1.1%\n\nKEY METRICS:\n  pain_score: mean=0.56, std=1.17, p25=0.00, p75=0.00\n  fatigue_score: mean=2.36, std=1.64, p25=0.00, p75=4.00\n  mood_instability: mean=1.31, std=1.58, p25=0.00, p75=3.00\n  bloating_score: mean=1.41, std=1.63, p25=0.00, p75=3.00\n  stress_score: mean=2.32, std=1.60, p25=0.00, p75=3.00\n  headache_score: mean=1.02, std=1.47, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.80, std=1.69, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.63, std=0.94, p25=1.00, p75=2.25\n  bleeding_present: mean=0.02, std=0.15, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.05, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.08, std=0.49, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.01, std=1.00, p25=-0.79, p75=0.69\n  estrogen_phase_z: mean=0.05, std=1.02, p25=-0.71, p75=0.68\n  pdg_phase_z: mean=0.04, std=1.01, p25=-0.81, p75=0.71\n  hormone_anomaly_flag: mean=0.08, std=0.27, p25=0.00, p75=0.00\n  resting_hr: mean=60.77, std=24.90, p25=42.76, p75=76.73\n  hrv_rmssd: mean=52.79, std=27.42, p25=33.44, p75=71.39\n  temp_diff_baseline: mean=-0.19, std=0.64, p25=0.00, p75=0.00\n  sleep_score: mean=76.76, std=8.62, p25=71.00, p75=82.00\n  sleep_duration_min: mean=293.74, std=246.52, p25=0.00, p75=511.00\n  sleep_efficiency: mean=92.03, std=7.00, p25=87.85, p75=97.60\n  deep_sleep_min: mean=78.78, std=27.57, p25=60.00, p75=97.00\n"
+  },
+  {
+    "id": "pop_cycle_day_20",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 20,
+      "n_records": 1321
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 20\nBased on 1,321 records (149 real + 1,172 synthetic), 292 users.\nTypical phase at day 20: Luteal 75.5%, Fertility 23.4%, Follicular 1.1%\n\nKEY METRICS:\n  pain_score: mean=0.63, std=1.21, p25=0.00, p75=0.00\n  fatigue_score: mean=2.29, std=1.65, p25=0.00, p75=4.00\n  mood_instability: mean=1.33, std=1.61, p25=0.00, p75=3.00\n  bloating_score: mean=1.15, std=1.56, p25=0.00, p75=2.50\n  stress_score: mean=2.46, std=1.62, p25=2.00, p75=4.00\n  headache_score: mean=0.98, std=1.42, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.77, std=1.59, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.59, std=0.93, p25=1.00, p75=2.20\n  bleeding_present: mean=0.02, std=0.14, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.04, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.07, std=0.43, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.08, std=1.05, p25=-0.71, p75=0.68\n  estrogen_phase_z: mean=-0.02, std=1.01, p25=-0.75, p75=0.63\n  pdg_phase_z: mean=0.07, std=1.03, p25=-0.78, p75=0.76\n  hormone_anomaly_flag: mean=0.08, std=0.28, p25=0.00, p75=0.00\n  resting_hr: mean=60.96, std=24.65, p25=42.63, p75=77.04\n  hrv_rmssd: mean=53.67, std=27.36, p25=34.48, p75=72.51\n  temp_diff_baseline: mean=-0.16, std=0.60, p25=0.00, p75=0.00\n  sleep_score: mean=76.78, std=8.46, p25=71.00, p75=83.00\n  sleep_duration_min: mean=265.62, std=248.74, p25=0.00, p75=494.25\n  sleep_efficiency: mean=91.83, std=7.09, p25=87.40, p75=97.70\n  deep_sleep_min: mean=78.42, std=26.90, p25=61.00, p75=96.00\n"
+  },
+  {
+    "id": "pop_cycle_day_21",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 21,
+      "n_records": 1314
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 21\nBased on 1,314 records (147 real + 1,167 synthetic), 292 users.\nTypical phase at day 21: Luteal 86.1%, Fertility 13.1%, Follicular 0.8%\n\nKEY METRICS:\n  pain_score: mean=0.60, std=1.21, p25=0.00, p75=0.00\n  fatigue_score: mean=2.45, std=1.62, p25=2.00, p75=4.00\n  mood_instability: mean=1.36, std=1.55, p25=0.00, p75=3.00\n  bloating_score: mean=1.28, std=1.58, p25=0.00, p75=3.00\n  stress_score: mean=2.47, std=1.64, p25=2.00, p75=4.00\n  headache_score: mean=1.09, std=1.51, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.77, std=1.61, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.64, std=0.96, p25=1.00, p75=2.25\n  bleeding_present: mean=0.02, std=0.14, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.00, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.07, std=0.40, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.03, std=0.97, p25=-0.82, p75=0.60\n  estrogen_phase_z: mean=-0.00, std=1.01, p25=-0.76, p75=0.63\n  pdg_phase_z: mean=-0.04, std=1.03, p25=-0.89, p75=0.67\n  hormone_anomaly_flag: mean=0.07, std=0.25, p25=0.00, p75=0.00\n  resting_hr: mean=59.07, std=24.69, p25=41.77, p75=74.36\n  hrv_rmssd: mean=52.79, std=26.75, p25=34.24, p75=70.54\n  temp_diff_baseline: mean=-0.19, std=0.63, p25=0.00, p75=0.00\n  sleep_score: mean=76.25, std=8.19, p25=71.00, p75=82.00\n  sleep_duration_min: mean=294.49, std=247.69, p25=0.00, p75=506.00\n  sleep_efficiency: mean=91.79, std=7.44, p25=87.60, p75=98.00\n  deep_sleep_min: mean=78.62, std=27.61, p25=60.00, p75=97.00\n"
+  },
+  {
+    "id": "pop_cycle_day_22",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 22,
+      "n_records": 1301
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 22\nBased on 1,301 records (141 real + 1,160 synthetic), 292 users.\nTypical phase at day 22: Luteal 92.9%, Fertility 6.5%, Follicular 0.6%\n\nKEY METRICS:\n  pain_score: mean=0.66, std=1.27, p25=0.00, p75=0.00\n  fatigue_score: mean=2.28, std=1.61, p25=0.00, p75=4.00\n  mood_instability: mean=1.42, std=1.60, p25=0.00, p75=3.00\n  bloating_score: mean=1.27, std=1.59, p25=0.00, p75=3.00\n  stress_score: mean=2.34, std=1.62, p25=0.00, p75=3.00\n  headache_score: mean=1.11, std=1.49, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.87, std=1.68, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.63, std=0.94, p25=1.00, p75=2.25\n  bleeding_present: mean=0.02, std=0.13, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.05, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.06, std=0.39, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.03, std=0.99, p25=-0.88, p75=0.62\n  estrogen_phase_z: mean=-0.01, std=0.97, p25=-0.73, p75=0.63\n  pdg_phase_z: mean=0.00, std=0.90, p25=-0.70, p75=0.68\n  hormone_anomaly_flag: mean=0.06, std=0.24, p25=0.00, p75=0.00\n  resting_hr: mean=61.51, std=25.49, p25=43.30, p75=77.90\n  hrv_rmssd: mean=53.59, std=26.76, p25=34.97, p75=71.47\n  temp_diff_baseline: mean=-0.17, std=0.62, p25=0.00, p75=0.00\n  sleep_score: mean=76.84, std=8.41, p25=71.00, p75=83.00\n  sleep_duration_min: mean=285.56, std=244.89, p25=0.00, p75=493.50\n  sleep_efficiency: mean=91.81, std=7.12, p25=87.40, p75=97.90\n  deep_sleep_min: mean=79.53, std=28.40, p25=61.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_23",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 23,
+      "n_records": 1282
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 23\nBased on 1,282 records (133 real + 1,149 synthetic), 291 users.\nTypical phase at day 23: Luteal 96.6%, Fertility 2.7%, Follicular 0.6%\n\nKEY METRICS:\n  pain_score: mean=0.67, std=1.29, p25=0.00, p75=0.00\n  fatigue_score: mean=2.30, std=1.66, p25=0.00, p75=4.00\n  mood_instability: mean=1.25, std=1.57, p25=0.00, p75=3.00\n  bloating_score: mean=1.35, std=1.60, p25=0.00, p75=3.00\n  stress_score: mean=2.40, std=1.60, p25=2.00, p75=3.00\n  headache_score: mean=1.10, std=1.51, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.81, std=1.65, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.64, std=0.94, p25=1.00, p75=2.25\n  bleeding_present: mean=0.03, std=0.16, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.04, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.08, std=0.45, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.00, std=0.97, p25=-0.75, p75=0.59\n  estrogen_phase_z: mean=0.00, std=0.98, p25=-0.75, p75=0.66\n  pdg_phase_z: mean=0.03, std=1.00, p25=-0.73, p75=0.65\n  hormone_anomaly_flag: mean=0.06, std=0.24, p25=0.00, p75=0.00\n  resting_hr: mean=61.03, std=25.65, p25=43.68, p75=76.77\n  hrv_rmssd: mean=52.71, std=27.80, p25=32.78, p75=72.15\n  temp_diff_baseline: mean=-0.16, std=0.58, p25=0.00, p75=0.00\n  sleep_score: mean=77.09, std=8.67, p25=71.00, p75=83.00\n  sleep_duration_min: mean=268.89, std=239.94, p25=0.00, p75=475.75\n  sleep_efficiency: mean=92.02, std=7.27, p25=87.67, p75=98.53\n  deep_sleep_min: mean=78.20, std=27.72, p25=59.00, p75=97.00\n"
+  },
+  {
+    "id": "pop_cycle_day_24",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 24,
+      "n_records": 1266
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 24\nBased on 1,266 records (130 real + 1,136 synthetic), 291 users.\nTypical phase at day 24: Luteal 97.9%, Fertility 1.7%, Follicular 0.4%\n\nKEY METRICS:\n  pain_score: mean=0.67, std=1.27, p25=0.00, p75=0.00\n  fatigue_score: mean=2.39, std=1.57, p25=2.00, p75=4.00\n  mood_instability: mean=1.31, std=1.59, p25=0.00, p75=3.00\n  bloating_score: mean=1.29, std=1.61, p25=0.00, p75=3.00\n  stress_score: mean=2.41, std=1.64, p25=0.00, p75=4.00\n  headache_score: mean=1.11, std=1.51, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.80, std=1.67, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.67, std=0.97, p25=1.00, p75=2.33\n  bleeding_present: mean=0.03, std=0.16, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.07, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.11, std=0.60, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.02, std=1.11, p25=-0.77, p75=0.62\n  estrogen_phase_z: mean=0.01, std=1.02, p25=-0.74, p75=0.68\n  pdg_phase_z: mean=0.07, std=1.09, p25=-0.76, p75=0.70\n  hormone_anomaly_flag: mean=0.10, std=0.29, p25=0.00, p75=0.00\n  resting_hr: mean=59.49, std=25.21, p25=41.11, p75=76.29\n  hrv_rmssd: mean=53.31, std=27.10, p25=34.87, p75=71.26\n  temp_diff_baseline: mean=-0.16, std=0.59, p25=0.00, p75=0.00\n  sleep_score: mean=76.67, std=8.48, p25=71.00, p75=82.00\n  sleep_duration_min: mean=273.44, std=245.39, p25=0.00, p75=468.75\n  sleep_efficiency: mean=92.08, std=7.06, p25=87.60, p75=98.20\n  deep_sleep_min: mean=78.65, std=27.07, p25=60.00, p75=97.00\n"
+  },
+  {
+    "id": "pop_cycle_day_25",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 25,
+      "n_records": 1236
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 25\nBased on 1,236 records (125 real + 1,111 synthetic), 291 users.\nTypical phase at day 25: Luteal 98.2%, Fertility 1.4%, Follicular 0.4%\n\nKEY METRICS:\n  pain_score: mean=0.65, std=1.25, p25=0.00, p75=0.00\n  fatigue_score: mean=2.28, std=1.62, p25=0.00, p75=3.00\n  mood_instability: mean=1.36, std=1.62, p25=0.00, p75=3.00\n  bloating_score: mean=1.29, std=1.56, p25=0.00, p75=3.00\n  stress_score: mean=2.38, std=1.58, p25=0.00, p75=3.00\n  headache_score: mean=1.05, std=1.52, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.79, std=1.61, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.62, std=0.92, p25=1.00, p75=2.20\n  bleeding_present: mean=0.02, std=0.14, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.03, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.06, std=0.34, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.03, std=0.99, p25=-0.77, p75=0.73\n  estrogen_phase_z: mean=0.03, std=0.98, p25=-0.71, p75=0.69\n  pdg_phase_z: mean=0.02, std=1.02, p25=-0.82, p75=0.74\n  hormone_anomaly_flag: mean=0.07, std=0.26, p25=0.00, p75=0.00\n  resting_hr: mean=61.72, std=26.09, p25=43.91, p75=78.73\n  hrv_rmssd: mean=53.37, std=27.68, p25=34.29, p75=72.19\n  temp_diff_baseline: mean=-0.16, std=0.62, p25=0.00, p75=0.00\n  sleep_score: mean=76.92, std=8.55, p25=71.00, p75=83.00\n  sleep_duration_min: mean=299.74, std=241.92, p25=0.00, p75=492.00\n  sleep_efficiency: mean=91.85, std=7.49, p25=87.40, p75=98.50\n  deep_sleep_min: mean=77.04, std=28.33, p25=58.00, p75=97.00\n"
+  },
+  {
+    "id": "pop_cycle_day_26",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 26,
+      "n_records": 1193
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 26\nBased on 1,193 records (115 real + 1,078 synthetic), 291 users.\nTypical phase at day 26: Luteal 98.8%, Fertility 0.8%, Follicular 0.4%\n\nKEY METRICS:\n  pain_score: mean=0.59, std=1.20, p25=0.00, p75=0.00\n  fatigue_score: mean=2.38, std=1.64, p25=0.00, p75=4.00\n  mood_instability: mean=1.26, std=1.54, p25=0.00, p75=3.00\n  bloating_score: mean=1.29, std=1.55, p25=0.00, p75=3.00\n  stress_score: mean=2.40, std=1.60, p25=0.00, p75=3.00\n  headache_score: mean=1.09, std=1.51, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.80, std=1.62, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.61, std=0.94, p25=1.00, p75=2.25\n  bleeding_present: mean=0.02, std=0.15, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.04, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.08, std=0.45, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.03, std=0.98, p25=-0.81, p75=0.66\n  estrogen_phase_z: mean=0.01, std=0.97, p25=-0.71, p75=0.70\n  pdg_phase_z: mean=-0.03, std=0.98, p25=-0.83, p75=0.70\n  hormone_anomaly_flag: mean=0.06, std=0.23, p25=0.00, p75=0.00\n  resting_hr: mean=60.54, std=25.46, p25=43.54, p75=77.34\n  hrv_rmssd: mean=52.87, std=26.95, p25=33.93, p75=70.63\n  temp_diff_baseline: mean=-0.15, std=0.56, p25=0.00, p75=0.00\n  sleep_score: mean=77.12, std=8.44, p25=71.00, p75=83.00\n  sleep_duration_min: mean=276.17, std=241.53, p25=0.00, p75=488.00\n  sleep_efficiency: mean=91.50, std=7.49, p25=86.40, p75=98.10\n  deep_sleep_min: mean=79.84, std=28.45, p25=60.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_27",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 27,
+      "n_records": 1138
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 27\nBased on 1,138 records (100 real + 1,038 synthetic), 289 users.\nTypical phase at day 27: Luteal 98.8%, Fertility 1.0%, Follicular 0.3%\n\nKEY METRICS:\n  pain_score: mean=0.67, std=1.25, p25=0.00, p75=0.00\n  fatigue_score: mean=2.45, std=1.58, p25=2.00, p75=4.00\n  mood_instability: mean=1.39, std=1.61, p25=0.00, p75=3.00\n  bloating_score: mean=1.32, std=1.60, p25=0.00, p75=3.00\n  stress_score: mean=2.34, std=1.61, p25=0.00, p75=3.00\n  headache_score: mean=1.05, std=1.48, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.78, std=1.62, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.67, std=0.94, p25=1.00, p75=2.25\n  bleeding_present: mean=0.02, std=0.14, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.06, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.07, std=0.43, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.01, std=1.01, p25=-0.74, p75=0.60\n  estrogen_phase_z: mean=-0.03, std=0.98, p25=-0.79, p75=0.62\n  pdg_phase_z: mean=0.01, std=1.01, p25=-0.76, p75=0.70\n  hormone_anomaly_flag: mean=0.07, std=0.25, p25=0.00, p75=0.00\n  resting_hr: mean=60.21, std=26.31, p25=42.67, p75=77.80\n  hrv_rmssd: mean=51.84, std=27.56, p25=32.54, p75=69.82\n  temp_diff_baseline: mean=-0.12, std=0.49, p25=0.00, p75=0.00\n  sleep_score: mean=77.05, std=8.33, p25=71.00, p75=83.00\n  sleep_duration_min: mean=279.92, std=234.69, p25=0.00, p75=465.50\n  sleep_efficiency: mean=91.49, std=7.39, p25=86.90, p75=98.00\n  deep_sleep_min: mean=78.28, std=28.06, p25=59.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_28",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 28,
+      "n_records": 1047
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 28\nBased on 1,047 records (87 real + 960 synthetic), 289 users.\nTypical phase at day 28: Luteal 99.0%, Fertility 0.8%, Follicular 0.2%\n\nKEY METRICS:\n  pain_score: mean=0.70, std=1.28, p25=0.00, p75=2.00\n  fatigue_score: mean=2.34, std=1.59, p25=0.00, p75=3.00\n  mood_instability: mean=1.38, std=1.57, p25=0.00, p75=3.00\n  bloating_score: mean=1.31, std=1.64, p25=0.00, p75=3.00\n  stress_score: mean=2.40, std=1.56, p25=2.00, p75=3.00\n  headache_score: mean=1.03, std=1.49, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.73, std=1.64, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.63, std=0.90, p25=1.00, p75=2.20\n  bleeding_present: mean=0.02, std=0.16, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.04, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.09, std=0.52, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.00, std=1.08, p25=-0.86, p75=0.70\n  estrogen_phase_z: mean=-0.02, std=1.03, p25=-0.84, p75=0.67\n  pdg_phase_z: mean=0.07, std=1.01, p25=-0.69, p75=0.72\n  hormone_anomaly_flag: mean=0.09, std=0.28, p25=0.00, p75=0.00\n  resting_hr: mean=60.59, std=25.25, p25=43.05, p75=77.18\n  hrv_rmssd: mean=54.21, std=27.32, p25=34.91, p75=72.27\n  temp_diff_baseline: mean=-0.13, std=0.52, p25=0.00, p75=0.00\n  sleep_score: mean=76.36, std=8.55, p25=71.00, p75=82.00\n  sleep_duration_min: mean=290.35, std=241.79, p25=0.00, p75=505.00\n  sleep_efficiency: mean=91.80, std=7.17, p25=87.60, p75=97.70\n  deep_sleep_min: mean=79.19, std=27.29, p25=62.00, p75=97.00\n"
+  },
+  {
+    "id": "pop_cycle_day_29",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 29,
+      "n_records": 938
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 29\nBased on 938 records (68 real + 870 synthetic), 287 users.\nTypical phase at day 29: Luteal 99.3%, Fertility 0.5%, Follicular 0.2%\n\nKEY METRICS:\n  pain_score: mean=0.75, std=1.33, p25=0.00, p75=2.00\n  fatigue_score: mean=2.33, std=1.63, p25=0.00, p75=4.00\n  mood_instability: mean=1.32, std=1.59, p25=0.00, p75=3.00\n  bloating_score: mean=1.27, std=1.60, p25=0.00, p75=3.00\n  stress_score: mean=2.48, std=1.67, p25=0.00, p75=4.00\n  headache_score: mean=1.08, std=1.45, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.72, std=1.59, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.67, std=0.98, p25=1.00, p75=2.33\n  bleeding_present: mean=0.02, std=0.14, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.06, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.10, std=0.60, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.03, std=0.99, p25=-0.80, p75=0.68\n  estrogen_phase_z: mean=-0.01, std=1.02, p25=-0.79, p75=0.64\n  pdg_phase_z: mean=0.01, std=0.98, p25=-0.76, p75=0.65\n  hormone_anomaly_flag: mean=0.08, std=0.27, p25=0.00, p75=0.00\n  resting_hr: mean=59.24, std=25.89, p25=40.52, p75=75.50\n  hrv_rmssd: mean=51.69, std=27.02, p25=32.66, p75=70.11\n  temp_diff_baseline: mean=-0.12, std=0.50, p25=0.00, p75=0.00\n  sleep_score: mean=76.89, std=8.84, p25=71.00, p75=83.00\n  sleep_duration_min: mean=287.96, std=248.32, p25=0.00, p75=522.50\n  sleep_efficiency: mean=91.36, std=7.56, p25=86.70, p75=97.85\n  deep_sleep_min: mean=78.54, std=27.66, p25=60.25, p75=97.00\n"
+  },
+  {
+    "id": "pop_cycle_day_30",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 30,
+      "n_records": 780
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 30\nBased on 780 records (56 real + 724 synthetic), 283 users.\nTypical phase at day 30: Luteal 99.1%, Fertility 0.6%, Follicular 0.3%\n\nKEY METRICS:\n  pain_score: mean=0.73, std=1.28, p25=0.00, p75=2.00\n  fatigue_score: mean=2.24, std=1.61, p25=0.00, p75=4.00\n  mood_instability: mean=1.29, std=1.54, p25=0.00, p75=3.00\n  bloating_score: mean=1.25, std=1.60, p25=0.00, p75=3.00\n  stress_score: mean=2.25, std=1.65, p25=0.00, p75=3.00\n  headache_score: mean=0.96, std=1.44, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.82, std=1.62, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.59, std=0.89, p25=1.00, p75=2.00\n  bleeding_present: mean=0.02, std=0.13, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.05, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.06, std=0.44, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.01, std=0.94, p25=-0.72, p75=0.69\n  estrogen_phase_z: mean=0.01, std=1.02, p25=-0.82, p75=0.69\n  pdg_phase_z: mean=-0.04, std=0.90, p25=-0.77, p75=0.59\n  hormone_anomaly_flag: mean=0.06, std=0.24, p25=0.00, p75=0.00\n  resting_hr: mean=59.99, std=25.57, p25=41.67, p75=76.86\n  hrv_rmssd: mean=53.13, std=27.84, p25=34.53, p75=70.31\n  temp_diff_baseline: mean=-0.10, std=0.47, p25=0.00, p75=0.00\n  sleep_score: mean=76.68, std=8.53, p25=71.00, p75=82.00\n  sleep_duration_min: mean=271.30, std=249.29, p25=0.00, p75=490.75\n  sleep_efficiency: mean=91.54, std=7.52, p25=86.90, p75=97.80\n  deep_sleep_min: mean=80.68, std=27.04, p25=63.00, p75=99.00\n"
+  },
+  {
+    "id": "pop_cycle_day_31",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 31,
+      "n_records": 624
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 31\nBased on 624 records (45 real + 579 synthetic), 272 users.\nTypical phase at day 31: Luteal 99.4%, Follicular 0.3%, Fertility 0.3%\n\nKEY METRICS:\n  pain_score: mean=0.80, std=1.35, p25=0.00, p75=2.00\n  fatigue_score: mean=2.30, std=1.61, p25=0.00, p75=4.00\n  mood_instability: mean=1.34, std=1.59, p25=0.00, p75=3.00\n  bloating_score: mean=1.31, std=1.56, p25=0.00, p75=3.00\n  stress_score: mean=2.40, std=1.61, p25=0.00, p75=3.25\n  headache_score: mean=1.11, std=1.53, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.75, std=1.66, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.65, std=0.91, p25=1.00, p75=2.25\n  bleeding_present: mean=0.02, std=0.14, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.06, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.09, std=0.52, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.01, std=0.97, p25=-0.78, p75=0.70\n  estrogen_phase_z: mean=0.05, std=1.01, p25=-0.68, p75=0.72\n  pdg_phase_z: mean=-0.10, std=1.01, p25=-0.90, p75=0.60\n  hormone_anomaly_flag: mean=0.07, std=0.26, p25=0.00, p75=0.00\n  resting_hr: mean=61.29, std=26.16, p25=43.42, p75=79.36\n  hrv_rmssd: mean=53.29, std=26.84, p25=35.19, p75=71.35\n  temp_diff_baseline: mean=-0.11, std=0.46, p25=0.00, p75=0.00\n  sleep_score: mean=76.39, std=8.21, p25=71.00, p75=82.00\n  sleep_duration_min: mean=271.62, std=238.94, p25=0.00, p75=483.00\n  sleep_efficiency: mean=91.33, std=7.86, p25=86.50, p75=98.25\n  deep_sleep_min: mean=77.72, std=28.68, p25=58.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_32",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 32,
+      "n_records": 444
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 32\nBased on 444 records (38 real + 406 synthetic), 244 users.\nTypical phase at day 32: Luteal 99.1%, Fertility 0.7%, Follicular 0.2%\n\nKEY METRICS:\n  pain_score: mean=0.75, std=1.34, p25=0.00, p75=2.00\n  fatigue_score: mean=2.26, std=1.55, p25=0.00, p75=3.00\n  mood_instability: mean=1.31, std=1.58, p25=0.00, p75=3.00\n  bloating_score: mean=1.35, std=1.64, p25=0.00, p75=3.00\n  stress_score: mean=2.26, std=1.69, p25=0.00, p75=4.00\n  headache_score: mean=1.06, std=1.48, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.78, std=1.63, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.58, std=0.93, p25=1.00, p75=2.21\n  bleeding_present: mean=0.03, std=0.16, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.00, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.07, std=0.35, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.02, std=0.98, p25=-0.72, p75=0.62\n  estrogen_phase_z: mean=-0.04, std=0.97, p25=-0.71, p75=0.60\n  pdg_phase_z: mean=-0.09, std=0.94, p25=-0.90, p75=0.65\n  hormone_anomaly_flag: mean=0.06, std=0.24, p25=0.00, p75=0.00\n  resting_hr: mean=61.40, std=25.16, p25=44.85, p75=78.10\n  hrv_rmssd: mean=55.05, std=28.06, p25=34.52, p75=72.68\n  temp_diff_baseline: mean=-0.13, std=0.53, p25=0.00, p75=0.00\n  sleep_score: mean=77.80, std=8.52, p25=72.00, p75=84.00\n  sleep_duration_min: mean=316.29, std=241.87, p25=38.00, p75=517.50\n  sleep_efficiency: mean=90.94, std=7.62, p25=85.90, p75=97.22\n  deep_sleep_min: mean=79.54, std=27.29, p25=62.75, p75=96.00\n"
+  },
+  {
+    "id": "pop_cycle_day_33",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 33,
+      "n_records": 308
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 33\nBased on 308 records (32 real + 276 synthetic), 204 users.\nTypical phase at day 33: Luteal 98.7%, Fertility 1.0%, Follicular 0.3%\n\nKEY METRICS:\n  pain_score: mean=0.76, std=1.37, p25=0.00, p75=2.00\n  fatigue_score: mean=2.39, std=1.58, p25=2.00, p75=4.00\n  mood_instability: mean=1.48, std=1.57, p25=0.00, p75=3.00\n  bloating_score: mean=1.30, std=1.61, p25=0.00, p75=3.00\n  stress_score: mean=2.35, std=1.48, p25=2.00, p75=3.00\n  headache_score: mean=1.06, std=1.53, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.69, std=1.57, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.64, std=0.95, p25=1.00, p75=2.25\n  bleeding_present: mean=0.02, std=0.15, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.06, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.07, std=0.42, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.13, std=1.02, p25=-0.64, p75=0.86\n  estrogen_phase_z: mean=0.09, std=1.08, p25=-0.71, p75=0.73\n  pdg_phase_z: mean=0.04, std=0.90, p25=-0.66, p75=0.71\n  hormone_anomaly_flag: mean=0.10, std=0.30, p25=0.00, p75=0.00\n  resting_hr: mean=62.85, std=28.16, p25=42.08, p75=79.41\n  hrv_rmssd: mean=53.83, std=29.48, p25=32.97, p75=73.25\n  temp_diff_baseline: mean=-0.15, std=0.58, p25=0.00, p75=0.00\n  sleep_score: mean=76.93, std=8.72, p25=71.00, p75=83.00\n  sleep_duration_min: mean=291.59, std=231.21, p25=9.00, p75=482.75\n  sleep_efficiency: mean=91.08, std=8.18, p25=85.30, p75=98.00\n  deep_sleep_min: mean=77.91, std=27.47, p25=59.75, p75=96.00\n"
+  },
+  {
+    "id": "pop_cycle_day_34",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 34,
+      "n_records": 189
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 34\nBased on 189 records (24 real + 165 synthetic), 144 users.\nTypical phase at day 34: Luteal 98.9%, Fertility 0.5%, Follicular 0.5%\n\nKEY METRICS:\n  pain_score: mean=0.88, std=1.37, p25=0.00, p75=2.00\n  fatigue_score: mean=2.44, std=1.70, p25=0.00, p75=4.00\n  mood_instability: mean=1.49, std=1.65, p25=0.00, p75=3.00\n  bloating_score: mean=1.52, std=1.70, p25=0.00, p75=3.00\n  stress_score: mean=2.45, std=1.57, p25=2.00, p75=3.00\n  headache_score: mean=0.96, std=1.45, p25=0.00, p75=2.00\n  sleep_issue_score: mean=1.83, std=1.65, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.71, std=0.91, p25=1.00, p75=2.33\n  bleeding_present: mean=0.03, std=0.18, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.01, std=0.07, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.12, std=0.67, p25=0.00, p75=0.00\n  lh_phase_z: mean=0.10, std=0.99, p25=-0.69, p75=0.78\n  estrogen_phase_z: mean=-0.02, std=1.01, p25=-0.84, p75=0.71\n  pdg_phase_z: mean=-0.18, std=0.89, p25=-0.85, p75=0.37\n  hormone_anomaly_flag: mean=0.06, std=0.23, p25=0.00, p75=0.00\n  resting_hr: mean=60.63, std=23.49, p25=44.23, p75=74.52\n  hrv_rmssd: mean=54.88, std=29.62, p25=35.57, p75=76.31\n  temp_diff_baseline: mean=-0.16, std=0.50, p25=0.00, p75=0.00\n  sleep_score: mean=77.64, std=8.17, p25=71.00, p75=83.00\n  sleep_duration_min: mean=298.72, std=237.06, p25=0.00, p75=511.00\n  sleep_efficiency: mean=92.71, std=7.30, p25=88.38, p75=98.80\n  deep_sleep_min: mean=82.26, std=25.97, p25=64.00, p75=98.00\n"
+  },
+  {
+    "id": "pop_cycle_day_35",
+    "metadata": {
+      "doc_type": "cycle_day_profile",
+      "cycle_day": 35,
+      "n_records": 107
+    },
+    "text": "POPULATION SUMMARY --- Cycle Day 35\nBased on 107 records (22 real + 85 synthetic), 93 users.\nTypical phase at day 35: Luteal 98.1%, Fertility 0.9%, Follicular 0.9%\n\nKEY METRICS:\n  pain_score: mean=0.60, std=1.27, p25=0.00, p75=0.00\n  fatigue_score: mean=2.49, std=1.57, p25=2.00, p75=4.00\n  mood_instability: mean=1.71, std=1.72, p25=0.00, p75=3.00\n  bloating_score: mean=1.27, std=1.62, p25=0.00, p75=3.00\n  stress_score: mean=2.15, std=1.73, p25=0.00, p75=3.25\n  headache_score: mean=1.15, std=1.54, p25=0.00, p75=2.50\n  sleep_issue_score: mean=1.97, std=1.62, p25=0.00, p75=3.00\n  symptom_burden_score: mean=1.67, std=0.91, p25=1.00, p75=2.17\n  bleeding_present: mean=0.04, std=0.19, p25=0.00, p75=0.00\n  heavy_flow_flag: mean=0.00, std=0.00, p25=0.00, p75=0.00\n  flow_volume_num: mean=0.12, std=0.49, p25=0.00, p75=0.00\n  lh_phase_z: mean=-0.04, std=0.90, p25=-0.73, p75=0.57\n  estrogen_phase_z: mean=0.07, std=0.96, p25=-0.60, p75=0.67\n  pdg_phase_z: mean=-0.26, std=0.92, p25=-1.06, p75=0.21\n  hormone_anomaly_flag: mean=0.04, std=0.19, p25=0.00, p75=0.00\n  resting_hr: mean=64.35, std=23.68, p25=56.00, p75=77.24\n  hrv_rmssd: mean=51.17, std=28.01, p25=30.70, p75=66.80\n  temp_diff_baseline: mean=-0.30, std=0.68, p25=0.00, p75=0.00\n  sleep_score: mean=77.12, std=9.32, p25=71.00, p75=83.00\n  sleep_duration_min: mean=251.50, std=246.83, p25=0.00, p75=464.75\n  sleep_efficiency: mean=91.16, std=9.91, p25=86.97, p75=97.92\n  deep_sleep_min: mean=83.84, std=27.58, p25=66.00, p75=101.00\n"
+  },
+  {
+    "id": "pop_symptom_pain_score",
+    "metadata": {
+      "doc_type": "symptom_profile",
+      "symptom": "pain_score",
+      "peak_phase": "Menstrual"
+    },
+    "text": "POPULATION SUMMARY — Symptom Profile: menstrual cramps / pelvic pain (pain_score)\nScale: 0=none, 2=low, 3=moderate, 4=high, 5=severe (Pipeline SEVERITY_MAP)\nAll users: mean=0.70/5, std=1.33\nReal users only: mean=0.72/5\nHighest in: Menstrual phase (mean=1.59/5)\n\nBY PHASE (all users):\n  Menstrual: mean=1.59/5, std=1.76 | none 50.9%, low 12.8%, moderate 17.6%, high 12.5%, severe 6.2%\n  Follicular: mean=0.32/5, std=0.91 | none 87.6%, low 6.7%, moderate 4.3%, high 0.8%, severe 0.6%\n  Fertility: mean=0.48/5, std=1.09 | none 82.7%, low 7.3%, moderate 7.4%, high 2.0%, severe 0.6%\n  Luteal: mean=0.68/5, std=1.28 | none 75.9%, low 9.3%, moderate 10.3%, high 3.5%, severe 1.0%\n"
+  },
+  {
+    "id": "pop_symptom_headache_score",
+    "metadata": {
+      "doc_type": "symptom_profile",
+      "symptom": "headache_score",
+      "peak_phase": "Menstrual"
+    },
+    "text": "POPULATION SUMMARY — Symptom Profile: headaches (headache_score)\nScale: 0=none, 2=low, 3=moderate, 4=high, 5=severe (Pipeline SEVERITY_MAP)\nAll users: mean=1.20/5, std=1.56\nReal users only: mean=1.20/5\nHighest in: Menstrual phase (mean=1.43/5)\n\nBY PHASE (all users):\n  Menstrual: mean=1.43/5, std=1.64 | none 52.9%, low 16.3%, moderate 16.8%, high 10.3%, severe 3.7%\n  Follicular: mean=1.31/5, std=1.60 | none 56.2%, low 16.2%, moderate 15.1%, high 9.4%, severe 3.1%\n  Fertility: mean=1.07/5, std=1.48 | none 62.6%, low 14.4%, moderate 16.2%, high 4.2%, severe 2.5%\n  Luteal: mean=1.06/5, std=1.49 | none 63.4%, low 14.5%, moderate 13.5%, high 6.7%, severe 1.9%\n"
+  },
+  {
+    "id": "pop_symptom_fatigue_score",
+    "metadata": {
+      "doc_type": "symptom_profile",
+      "symptom": "fatigue_score",
+      "peak_phase": "Menstrual"
+    },
+    "text": "POPULATION SUMMARY — Symptom Profile: fatigue / low energy (fatigue_score)\nScale: 0=none, 2=low, 3=moderate, 4=high, 5=severe (Pipeline SEVERITY_MAP)\nAll users: mean=2.35/5, std=1.65\nReal users only: mean=2.36/5\nHighest in: Menstrual phase (mean=2.50/5)\n\nBY PHASE (all users):\n  Menstrual: mean=2.50/5, std=1.64 | none 24.4%, low 16.7%, moderate 27.5%, high 23.0%, severe 8.5%\n  Follicular: mean=2.33/5, std=1.66 | none 28.2%, low 17.0%, moderate 27.4%, high 19.8%, severe 7.6%\n  Fertility: mean=2.26/5, std=1.68 | none 30.3%, low 16.9%, moderate 26.3%, high 19.3%, severe 7.2%\n  Luteal: mean=2.33/5, std=1.62 | none 27.2%, low 17.7%, moderate 28.7%, high 20.6%, severe 5.8%\n"
+  },
+  {
+    "id": "pop_symptom_sleep_issue_score",
+    "metadata": {
+      "doc_type": "symptom_profile",
+      "symptom": "sleep_issue_score",
+      "peak_phase": "Menstrual"
+    },
+    "text": "POPULATION SUMMARY — Symptom Profile: sleep disturbances (sleep_issue_score)\nScale: 0=none, 2=low, 3=moderate, 4=high, 5=severe (Pipeline SEVERITY_MAP)\nAll users: mean=1.81/5, std=1.64\nReal users only: mean=1.82/5\nHighest in: Menstrual phase (mean=1.92/5)\n\nBY PHASE (all users):\n  Menstrual: mean=1.92/5, std=1.60 | none 34.8%, low 25.8%, moderate 22.9%, high 11.0%, severe 5.5%\n  Follicular: mean=1.76/5, std=1.65 | none 41.1%, low 23.5%, moderate 18.7%, high 10.9%, severe 5.8%\n  Fertility: mean=1.91/5, std=1.70 | none 38.3%, low 21.3%, moderate 21.3%, high 11.2%, severe 8.0%\n  Luteal: mean=1.77/5, std=1.63 | none 40.2%, low 23.6%, moderate 20.1%, high 10.8%, severe 5.2%\n"
+  },
+  {
+    "id": "pop_symptom_mood_instability",
+    "metadata": {
+      "doc_type": "symptom_profile",
+      "symptom": "mood_instability",
+      "peak_phase": "Menstrual"
+    },
+    "text": "POPULATION SUMMARY — Symptom Profile: mood swings / emotional instability (mood_instability)\nScale: 0=none, 2=low, 3=moderate, 4=high, 5=severe (Pipeline SEVERITY_MAP)\nAll users: mean=1.34/5, std=1.58\nReal users only: mean=1.33/5\nHighest in: Menstrual phase (mean=1.59/5)\n\nBY PHASE (all users):\n  Menstrual: mean=1.59/5, std=1.64 | none 47.5%, low 15.1%, moderate 24.0%, high 10.0%, severe 3.4%\n  Follicular: mean=1.25/5, std=1.53 | none 56.3%, low 18.0%, moderate 16.7%, high 6.4%, severe 2.6%\n  Fertility: mean=1.25/5, std=1.55 | none 57.6%, low 14.8%, moderate 17.5%, high 8.1%, severe 1.9%\n  Luteal: mean=1.33/5, std=1.58 | none 54.9%, low 16.2%, moderate 17.6%, high 8.7%, severe 2.6%\n"
+  },
+  {
+    "id": "pop_symptom_stress_score",
+    "metadata": {
+      "doc_type": "symptom_profile",
+      "symptom": "stress_score",
+      "peak_phase": "Menstrual"
+    },
+    "text": "POPULATION SUMMARY — Symptom Profile: stress (stress_score)\nScale: 0=none, 2=low, 3=moderate, 4=high, 5=severe (Pipeline SEVERITY_MAP)\nAll users: mean=2.46/5, std=1.60\nReal users only: mean=2.46/5\nHighest in: Menstrual phase (mean=2.57/5)\n\nBY PHASE (all users):\n  Menstrual: mean=2.57/5, std=1.56 | none 21.2%, low 17.2%, moderate 32.3%, high 21.2%, severe 8.1%\n  Follicular: mean=2.52/5, std=1.60 | none 22.8%, low 16.9%, moderate 32.4%, high 18.1%, severe 9.8%\n  Fertility: mean=2.46/5, std=1.61 | none 24.2%, low 17.9%, moderate 30.7%, high 18.6%, severe 8.6%\n  Luteal: mean=2.37/5, std=1.62 | none 26.4%, low 16.6%, moderate 32.5%, high 16.7%, severe 7.8%\n"
+  },
+  {
+    "id": "pop_symptom_bloating_score",
+    "metadata": {
+      "doc_type": "symptom_profile",
+      "symptom": "bloating_score",
+      "peak_phase": "Menstrual"
+    },
+    "text": "POPULATION SUMMARY — Symptom Profile: bloating / abdominal discomfort (bloating_score)\nScale: 0=none, 2=low, 3=moderate, 4=high, 5=severe (Pipeline SEVERITY_MAP)\nAll users: mean=1.37/5, std=1.60\nReal users only: mean=1.40/5\nHighest in: Menstrual phase (mean=1.92/5)\n\nBY PHASE (all users):\n  Menstrual: mean=1.92/5, std=1.69 | none 39.3%, low 15.1%, moderate 25.8%, high 14.8%, severe 5.0%\n  Follicular: mean=1.20/5, std=1.50 | none 57.4%, low 19.5%, moderate 13.7%, high 7.8%, severe 1.7%\n  Fertility: mean=1.31/5, std=1.58 | none 55.6%, low 16.7%, moderate 16.2%, high 8.8%, severe 2.8%\n  Luteal: mean=1.29/5, std=1.59 | none 57.2%, low 14.2%, moderate 16.3%, high 10.2%, severe 2.1%\n"
+  },
+  {
+    "id": "pop_symptom_symptom_burden_score",
+    "metadata": {
+      "doc_type": "symptom_profile",
+      "symptom": "symptom_burden_score",
+      "peak_phase": "Menstrual"
+    },
+    "text": "POPULATION SUMMARY — Symptom Profile: overall symptom burden (mean of 6 symptoms) (symptom_burden_score)\nScale: 0=none, 2=low, 3=moderate, 4=high, 5=severe (Pipeline SEVERITY_MAP)\nAll users: mean=1.67/5, std=0.96\nReal users only: mean=1.69/5\nHighest in: Menstrual phase (mean=2.02/5)\n\nBY PHASE (all users):\n  Menstrual: mean=2.02/5, std=0.97 | none 5.0%, none 0.2%, none 0.2%, none 1.0%, none 0.3%, none 2.4%, none 1.5%, none 0.6%, none 0.4%, 1 7.1%, 1 0.6%, 1 1.0%, 1 2.2%, 1 2.9%, 1 1.4%, 1 5.8%, 1 1.5%, 1 4.1%, 1 3.5%, 1 1.7%, 1 0.7%, low 11.3%, low 0.7%, low 1.5%, low 3.3%, low 3.9%, low 1.3%, low 5.0%, low 1.4%, low 3.4%, low 2.3%, low 1.1%, low 0.7%, moderate 7.8%, moderate 0.5%, moderate 0.5%, moderate 1.2%, moderate 1.9%, moderate 0.3%, moderate 2.6%, moderate 0.2%, moderate 1.2%, moderate 0.4%, moderate 0.1%, moderate 0.1%, high 2.3%, high 0.1%, high 0.0%, high 0.1%, high 0.3%, high 0.3%, high 0.1%, high 0.0%, severe 0.2%\n  Follicular: mean=1.56/5, std=0.92 | none 10.4%, none 0.3%, none 0.7%, none 2.6%, none 0.8%, none 3.6%, none 2.4%, none 0.9%, none 0.5%, 1 10.5%, 1 0.8%, 1 1.8%, 1 3.4%, 1 4.4%, 1 1.7%, 1 7.0%, 1 1.9%, 1 4.5%, 1 3.2%, 1 1.7%, 1 0.8%, low 10.8%, low 0.6%, low 1.3%, low 2.4%, low 3.3%, low 0.7%, low 3.8%, low 0.6%, low 2.2%, low 1.1%, low 0.5%, low 0.3%, moderate 4.0%, moderate 0.1%, moderate 0.1%, moderate 0.4%, moderate 0.8%, moderate 0.0%, moderate 1.0%, moderate 0.4%, moderate 0.1%, moderate 0.0%, moderate 0.0%, high 1.0%, high 0.1%, high 0.1%, high 0.0%, severe 0.2%\n  Fertility: mean=1.61/5, std=0.96 | none 11.0%, none 0.5%, none 0.4%, none 2.3%, none 0.8%, none 3.4%, none 2.2%, none 0.9%, none 0.7%, 1 9.7%, 1 0.9%, 1 1.4%, 1 2.9%, 1 3.9%, 1 1.7%, 1 6.5%, 1 1.6%, 1 4.3%, 1 3.3%, 1 1.4%, 1 1.1%, low 10.4%, low 1.2%, low 1.3%, low 2.3%, low 3.5%, low 0.9%, low 4.0%, low 0.6%, low 2.5%, low 1.0%, low 0.5%, low 0.6%, moderate 5.1%, moderate 0.3%, moderate 0.1%, moderate 0.4%, moderate 1.0%, moderate 0.0%, moderate 1.0%, moderate 0.1%, moderate 0.5%, moderate 0.2%, moderate 0.0%, moderate 0.1%, high 1.1%, high 0.0%, high 0.0%, high 0.1%, high 0.1%, high 0.1%, severe 0.2%\n  Luteal: mean=1.63/5, std=0.94 | none 9.5%, none 0.3%, none 0.5%, none 2.4%, none 0.8%, none 3.1%, none 2.5%, none 0.8%, none 0.4%, 1 9.9%, 1 0.7%, 1 1.8%, 1 3.5%, 1 4.2%, 1 1.7%, 1 7.1%, 1 1.8%, 1 4.1%, 1 3.4%, 1 1.5%, 1 0.8%, low 11.2%, low 0.7%, low 1.2%, low 2.4%, low 3.4%, low 0.8%, low 3.8%, low 0.7%, low 2.4%, low 1.4%, low 0.5%, low 0.3%, moderate 4.8%, moderate 0.2%, moderate 0.2%, moderate 0.5%, moderate 1.1%, moderate 0.1%, moderate 1.1%, moderate 0.1%, moderate 0.5%, moderate 0.1%, moderate 0.0%, moderate 0.1%, high 1.0%, high 0.0%, high 0.0%, high 0.1%, high 0.0%, high 0.1%, high 0.0%, severe 0.2%\n"
+  },
+  {
+    "id": "pop_wearable_resting_hr",
+    "metadata": {
+      "doc_type": "wearable_norm",
+      "signal": "resting_hr",
+      "unit": "bpm"
+    },
+    "text": "POPULATION SUMMARY — Wearable Signal: Resting heart rate (zeros removed as invalid) (resting_hr)\nUnit: bpm | Overall: mean=60.75, std=23.84, null_rate=3.4%\n\nBY PHASE:\n  Menstrual: mean=59.35 bpm, std=24.17, p10=26.78, p90=89.08, null_rate=4.3%\n  Follicular: mean=60.97 bpm, std=21.76, p10=32.41, p90=88.37, null_rate=1.8%\n  Fertility: mean=61.87 bpm, std=23.39, p10=30.16, p90=89.83, null_rate=4.5%\n  Luteal: mean=60.79 bpm, std=25.40, p10=26.90, p90=92.63, null_rate=3.9%\n"
+  },
+  {
+    "id": "pop_wearable_hrv_rmssd",
+    "metadata": {
+      "doc_type": "wearable_norm",
+      "signal": "hrv_rmssd",
+      "unit": "ms"
+    },
+    "text": "POPULATION SUMMARY — Wearable Signal: Heart rate variability RMSSD (overnight) (hrv_rmssd)\nUnit: ms | Overall: mean=55.45, std=27.90, null_rate=14.8%\n\nBY PHASE:\n  Menstrual: mean=59.36 ms, std=29.20, p10=21.85, p90=97.18, null_rate=15.1%\n  Follicular: mean=57.04 ms, std=27.79, p10=21.58, p90=93.43, null_rate=14.6%\n  Fertility: mean=53.97 ms, std=28.07, p10=19.16, p90=90.74, null_rate=15.4%\n  Luteal: mean=52.96 ms, std=27.04, p10=18.52, p90=88.16, null_rate=14.7%\n"
+  },
+  {
+    "id": "pop_wearable_temp_diff_baseline",
+    "metadata": {
+      "doc_type": "wearable_norm",
+      "signal": "temp_diff_baseline",
+      "unit": "°C"
+    },
+    "text": "POPULATION SUMMARY — Wearable Signal: Wrist temperature deviation from personal baseline (temp_diff_baseline)\nUnit: °C | Overall: mean=-0.21, std=0.68, null_rate=9.1%\n\nBY PHASE:\n  Menstrual: mean=-0.24 °C, std=0.74, p10=-1.24, p90=0.00, null_rate=9.0%\n  Follicular: mean=-0.18 °C, std=0.63, p10=-0.26, p90=0.00, null_rate=9.3%\n  Fertility: mean=-0.36 °C, std=0.84, p10=-1.75, p90=0.00, null_rate=8.7%\n  Luteal: mean=-0.17 °C, std=0.61, p10=-0.61, p90=0.00, null_rate=9.1%\n"
+  },
+  {
+    "id": "pop_wearable_nightly_temp",
+    "metadata": {
+      "doc_type": "wearable_norm",
+      "signal": "nightly_temp",
+      "unit": "°C"
+    },
+    "text": "POPULATION SUMMARY — Wearable Signal: Absolute wrist skin temperature at night (nightly_temp)\nUnit: °C | Overall: mean=33.80, std=0.91, null_rate=20.1%\n\nBY PHASE:\n  Menstrual: mean=33.82 °C, std=0.94, p10=32.63, p90=35.00, null_rate=21.0%\n  Follicular: mean=33.63 °C, std=0.80, p10=32.59, p90=34.64, null_rate=19.4%\n  Fertility: mean=33.75 °C, std=0.91, p10=32.59, p90=34.87, null_rate=19.7%\n  Luteal: mean=33.93 °C, std=0.95, p10=32.72, p90=35.14, null_rate=20.5%\n"
+  },
+  {
+    "id": "pop_wearable_sleep_score",
+    "metadata": {
+      "doc_type": "wearable_norm",
+      "signal": "sleep_score",
+      "unit": "0–100"
+    },
+    "text": "POPULATION SUMMARY — Wearable Signal: Composite sleep quality score (sleep_score)\nUnit: 0–100 | Overall: mean=77.09, std=8.50, null_rate=10.6%\n\nBY PHASE:\n  Menstrual: mean=77.62 0–100, std=8.01, p10=67.00, p90=88.00, null_rate=10.4%\n  Follicular: mean=77.45 0–100, std=8.65, p10=66.00, p90=88.00, null_rate=10.5%\n  Fertility: mean=76.43 0–100, std=8.70, p10=65.00, p90=87.00, null_rate=10.3%\n  Luteal: mean=76.80 0–100, std=8.49, p10=66.00, p90=88.00, null_rate=10.9%\n"
+  },
+  {
+    "id": "pop_wearable_sleep_duration_min",
+    "metadata": {
+      "doc_type": "wearable_norm",
+      "signal": "sleep_duration_min",
+      "unit": "min"
+    },
+    "text": "POPULATION SUMMARY — Wearable Signal: Total nightly sleep duration (values >720 removed as invalid) (sleep_duration_min)\nUnit: min | Overall: mean=290.47, std=238.89, null_rate=65.8%\n\nBY PHASE:\n  Menstrual: mean=291.61 min, std=237.33, p10=0.00, p90=617.40, null_rate=65.9%\n  Follicular: mean=286.82 min, std=240.07, p10=0.00, p90=623.00, null_rate=64.5%\n  Fertility: mean=301.02 min, std=231.51, p10=0.00, p90=608.00, null_rate=65.3%\n  Luteal: mean=289.04 min, std=241.31, p10=0.00, p90=623.00, null_rate=67.0%\n"
+  },
+  {
+    "id": "pop_wearable_deep_sleep_min",
+    "metadata": {
+      "doc_type": "wearable_norm",
+      "signal": "deep_sleep_min",
+      "unit": "min"
+    },
+    "text": "POPULATION SUMMARY — Wearable Signal: Deep sleep duration (deep_sleep_min)\nUnit: min | Overall: mean=78.64, std=27.37, null_rate=10.6%\n\nBY PHASE:\n  Menstrual: mean=76.60 min, std=25.78, p10=43.00, p90=109.00, null_rate=10.8%\n  Follicular: mean=79.73 min, std=28.02, p10=45.00, p90=116.00, null_rate=10.4%\n  Fertility: mean=78.36 min, std=26.75, p10=45.00, p90=112.00, null_rate=10.9%\n  Luteal: mean=78.81 min, std=27.71, p10=44.00, p90=115.00, null_rate=10.6%\n"
+  },
+  {
+    "id": "pop_wearable_rem_sleep_min",
+    "metadata": {
+      "doc_type": "wearable_norm",
+      "signal": "rem_sleep_min",
+      "unit": "min"
+    },
+    "text": "POPULATION SUMMARY — Wearable Signal: REM sleep duration (rem_sleep_min)\nUnit: min | Overall: mean=253.30, std=198.00, null_rate=9.9%\n\nBY PHASE:\n  Menstrual: mean=252.38 min, std=197.78, p10=0.00, p90=532.00, null_rate=9.7%\n  Follicular: mean=245.29 min, std=192.35, p10=0.00, p90=515.00, null_rate=10.0%\n  Fertility: mean=259.81 min, std=206.36, p10=0.00, p90=544.00, null_rate=9.7%\n  Luteal: mean=257.71 min, std=199.19, p10=0.00, p90=534.00, null_rate=10.0%\n"
+  },
+  {
+    "id": "pop_wearable_sleep_efficiency",
+    "metadata": {
+      "doc_type": "wearable_norm",
+      "signal": "sleep_efficiency",
+      "unit": "%"
+    },
+    "text": "POPULATION SUMMARY — Wearable Signal: Sleep efficiency (time asleep / time in bed) (sleep_efficiency)\nUnit: % | Overall: mean=92.36, std=6.76, null_rate=10.1%\n\nBY PHASE:\n  Menstrual: mean=92.91 %, std=5.86, p10=85.40, p90=100.00, null_rate=10.3%\n  Follicular: mean=92.77 %, std=6.14, p10=84.70, p90=100.00, null_rate=9.9%\n  Fertility: mean=93.04 %, std=6.04, p10=85.60, p90=100.00, null_rate=10.4%\n  Luteal: mean=91.54 %, std=7.70, p10=81.40, p90=100.00, null_rate=10.1%\n"
+  },
+  {
+    "id": "pop_cycle_regularity",
+    "metadata": {
+      "doc_type": "cycle_regularity"
+    },
+    "text": "POPULATION SUMMARY --- Menstrual Cycle Regularity\nBased on 292 users (42 real, 250 synthetic), 43,785 daily records.\n\nCYCLE LENGTH (cycle_length_estimate):\n  All users: mean=31.65 days, std=3.07, p10=28.00, p50=32.00, p90=35.00\n  Real users: mean=30.22 days\n  Long cycle (>35d): 8.3% of days\n  Short cycle (<21d): 0.1% of days\n  Irregular (variation >7d): 1.0% of days\n\nCYCLE LENGTH VARIATION (rolling 3-cycle std):\n  mean=2.39 days, std=1.60\n\nCYCLE ID: avg 5.20 cycles per user\n"
+  },
+  {
+    "id": "pop_demographics",
+    "metadata": {
+      "doc_type": "demographics"
+    },
+    "text": "POPULATION SUMMARY --- User Demographics\n292 users total: 42 real participants, 250 synthetic.\n\nREAL USERS (n=42):\n  birth_year: 1993-2004, mean=2001\n  age (from daily_features): mean=24.55 yrs\n  age_of_first_menarche: mean=11.93, min=10, max=15\n  early_menarche_flag (<11y): 13.3%\n  sexually_active: 35.7% yes, 64.3% no\n  menstrual_health_literacy: Low 9.5%, Medium 54.8%, High 28.6%\n  gender: {'Woman': 37, 'Non-binary': 2, 'Gender Fluid': 1, 'Other': 1, 'Prefer not to say': 1}\n  ethnicity top-3: ['East Asian', 'Southeast Asian', 'White']\n\nALL USERS (real + synthetic):\n  age mean=24.98 yrs\n  sexual_activity_flag: 37.9% active\n  early_menarche_flag: 12.4%\n  menstrual_health_literacy_num (1=Low,2=Mod,3=High): mean=2.18\n"
+  },
+  {
+    "id": "pop_subgroup_regular_cycle",
+    "metadata": {
+      "doc_type": "subgroup",
+      "subgroup": "regular_cycle"
+    },
+    "text": "SUBGROUP SUMMARY --- Regular Menstrual Cycle Users\nDefinition: cycle_irregular_flag=0, variation <=7 days\nBased on 43,326 records (5,422 real + 37,904 synthetic), 292 users.\n\nPHASE DISTRIBUTION: Luteal 38.6%, Follicular 30.3%, Menstrual 17.3%, Fertility 13.8%\n\nSYMPTOM SCORES (0-5):\n  pain_score: mean=0.70/5\n  headache_score: mean=1.20/5\n  fatigue_score: mean=2.34/5\n  sleep_issue_score: mean=1.81/5\n  mood_instability: mean=1.34/5\n  stress_score: mean=2.46/5\n  bloating_score: mean=1.37/5\n  symptom_burden_score: mean=1.67/5\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=31.68 days, std=3.02\n  cycle_irregular_flag: 0.0%\n  early_menarche_flag: 12.5%\n\nWEARABLE SIGNALS:\n  resting_hr: mean=60.74 bpm\n  hrv_rmssd: mean=55.51 ms\n  sleep_score: mean=77.09\n  sleep_duration_min: mean=289.22 min\n"
+  },
+  {
+    "id": "pop_subgroup_irregular_cycle",
+    "metadata": {
+      "doc_type": "subgroup",
+      "subgroup": "irregular_cycle"
+    },
+    "text": "SUBGROUP SUMMARY --- Irregular Menstrual Cycle Users\nDefinition: cycle_irregular_flag=1, variation >7 days\nBased on 459 records (237 real + 222 synthetic), 16 users.\n\nPHASE DISTRIBUTION: Follicular 36.4%, Luteal 25.9%, Fertility 19.4%, Menstrual 18.3%\n\nSYMPTOM SCORES (0-5):\n  pain_score: mean=0.51/5\n  headache_score: mean=1.07/5\n  fatigue_score: mean=2.94/5\n  sleep_issue_score: mean=2.20/5\n  mood_instability: mean=1.02/5\n  stress_score: mean=2.44/5\n  bloating_score: mean=1.35/5\n  symptom_burden_score: mean=1.78/5\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=27.65 days, std=5.38\n  cycle_irregular_flag: 100.0%\n  early_menarche_flag: 0.7%\n\nWEARABLE SIGNALS:\n  resting_hr: mean=61.97 bpm\n  hrv_rmssd: mean=49.57 ms\n  sleep_score: mean=76.93\n  sleep_duration_min: mean=373.37 min\n"
+  },
+  {
+    "id": "pop_subgroup_high_burden",
+    "metadata": {
+      "doc_type": "subgroup",
+      "subgroup": "high_burden"
+    },
+    "text": "SUBGROUP SUMMARY --- High Symptom Burden Users\nDefinition: symptom_burden_score >= top 25%\nBased on 10,540 records (1,054 real + 9,486 synthetic), 288 users.\n\nPHASE DISTRIBUTION: Luteal 35.8%, Menstrual 26.5%, Follicular 25.3%, Fertility 12.5%\n\nSYMPTOM SCORES (0-5):\n  pain_score: mean=1.82/5\n  headache_score: mean=1.36/5\n  fatigue_score: mean=3.37/5\n  sleep_issue_score: mean=2.98/5\n  mood_instability: mean=2.61/5\n  stress_score: mean=3.39/5\n  bloating_score: mean=2.63/5\n  symptom_burden_score: mean=2.91/5\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=31.72 days, std=3.12\n  cycle_irregular_flag: 0.9%\n  early_menarche_flag: 11.6%\n\nWEARABLE SIGNALS:\n  resting_hr: mean=60.33 bpm\n  hrv_rmssd: mean=55.15 ms\n  sleep_score: mean=77.23\n  sleep_duration_min: mean=290.66 min\n"
+  },
+  {
+    "id": "pop_subgroup_low_burden",
+    "metadata": {
+      "doc_type": "subgroup",
+      "subgroup": "low_burden"
+    },
+    "text": "SUBGROUP SUMMARY --- Low Symptom Burden Users\nDefinition: symptom_burden_score <= bottom 25%\nBased on 12,060 records (1,023 real + 11,037 synthetic), 287 users.\n\nPHASE DISTRIBUTION: Luteal 40.0%, Follicular 34.4%, Fertility 14.6%, Menstrual 11.0%\n\nSYMPTOM SCORES (0-5):\n  pain_score: mean=0.15/5\n  headache_score: mean=1.08/5\n  fatigue_score: mean=1.00/5\n  sleep_issue_score: mean=0.67/5\n  mood_instability: mean=0.37/5\n  stress_score: mean=1.17/5\n  bloating_score: mean=0.41/5\n  symptom_burden_score: mean=0.56/5\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=31.65 days, std=2.93\n  cycle_irregular_flag: 0.7%\n  early_menarche_flag: 12.2%\n\nWEARABLE SIGNALS:\n  resting_hr: mean=60.29 bpm\n  hrv_rmssd: mean=54.83 ms\n  sleep_score: mean=76.94\n  sleep_duration_min: mean=281.83 min\n"
+  },
+  {
+    "id": "pop_subgroup_long_cycle",
+    "metadata": {
+      "doc_type": "subgroup",
+      "subgroup": "long_cycle"
+    },
+    "text": "SUBGROUP SUMMARY --- Long Cycle Users (>35 days)\nDefinition: cycle_gt_35_flag=1\nBased on 3,646 records (537 real + 3,109 synthetic), 89 users.\n\nPHASE DISTRIBUTION: Luteal 37.5%, Follicular 31.8%, Menstrual 17.6%, Fertility 13.1%\n\nSYMPTOM SCORES (0-5):\n  pain_score: mean=0.75/5\n  headache_score: mean=1.17/5\n  fatigue_score: mean=2.45/5\n  sleep_issue_score: mean=1.96/5\n  mood_instability: mean=1.40/5\n  stress_score: mean=2.50/5\n  bloating_score: mean=1.44/5\n  symptom_burden_score: mean=1.72/5\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=36.88 days, std=1.41\n  cycle_irregular_flag: 1.0%\n  early_menarche_flag: 10.3%\n\nWEARABLE SIGNALS:\n  resting_hr: mean=61.49 bpm\n  hrv_rmssd: mean=54.56 ms\n  sleep_score: mean=77.41\n  sleep_duration_min: mean=305.52 min\n"
+  },
+  {
+    "id": "pop_subgroup_early_menarche",
+    "metadata": {
+      "doc_type": "subgroup",
+      "subgroup": "early_menarche"
+    },
+    "text": "SUBGROUP SUMMARY --- Early Menarche Users (<11 years old)\nDefinition: early_menarche_flag=1\nBased on 5,431 records (751 real + 4,680 synthetic), 35 users.\n\nPHASE DISTRIBUTION: Luteal 38.4%, Follicular 29.8%, Menstrual 18.1%, Fertility 13.7%\n\nSYMPTOM SCORES (0-5):\n  pain_score: mean=0.70/5\n  headache_score: mean=1.21/5\n  fatigue_score: mean=2.40/5\n  sleep_issue_score: mean=1.78/5\n  mood_instability: mean=1.25/5\n  stress_score: mean=2.55/5\n  bloating_score: mean=1.33/5\n  symptom_burden_score: mean=1.67/5\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=31.70 days, std=3.01\n  cycle_irregular_flag: 0.1%\n  early_menarche_flag: 100.0%\n\nWEARABLE SIGNALS:\n  resting_hr: mean=61.08 bpm\n  hrv_rmssd: mean=56.95 ms\n  sleep_score: mean=77.48\n  sleep_duration_min: mean=287.40 min\n"
+  },
+  {
+    "id": "pop_subgroup_high_literacy",
+    "metadata": {
+      "doc_type": "subgroup",
+      "subgroup": "high_literacy"
+    },
+    "text": "SUBGROUP SUMMARY --- High Menstrual Health Literacy Users\nDefinition: menstrual_health_literacy_num=3\nBased on 12,455 records (1,878 real + 10,577 synthetic), 82 users.\n\nPHASE DISTRIBUTION: Luteal 37.8%, Follicular 30.5%, Menstrual 17.4%, Fertility 14.2%\n\nSYMPTOM SCORES (0-5):\n  pain_score: mean=0.74/5\n  headache_score: mean=1.27/5\n  fatigue_score: mean=2.40/5\n  sleep_issue_score: mean=1.84/5\n  mood_instability: mean=1.38/5\n  stress_score: mean=2.55/5\n  bloating_score: mean=1.42/5\n  symptom_burden_score: mean=1.70/5\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=31.48 days, std=2.90\n  cycle_irregular_flag: 0.9%\n  early_menarche_flag: 16.7%\n\nWEARABLE SIGNALS:\n  resting_hr: mean=60.94 bpm\n  hrv_rmssd: mean=56.46 ms\n  sleep_score: mean=77.15\n  sleep_duration_min: mean=294.48 min\n"
+  },
+  {
+    "id": "pop_subgroup_low_literacy",
+    "metadata": {
+      "doc_type": "subgroup",
+      "subgroup": "low_literacy"
+    },
+    "text": "SUBGROUP SUMMARY --- Low Menstrual Health Literacy Users\nDefinition: menstrual_health_literacy_num=1\nBased on 5,360 records (456 real + 4,904 synthetic), 36 users.\n\nPHASE DISTRIBUTION: Luteal 38.9%, Follicular 30.6%, Menstrual 17.5%, Fertility 13.0%\n\nSYMPTOM SCORES (0-5):\n  pain_score: mean=0.64/5\n  headache_score: mean=1.12/5\n  fatigue_score: mean=2.27/5\n  sleep_issue_score: mean=1.75/5\n  mood_instability: mean=1.30/5\n  stress_score: mean=2.37/5\n  bloating_score: mean=1.34/5\n  symptom_burden_score: mean=1.63/5\n\nCYCLE METRICS:\n  cycle_length_estimate: mean=32.00 days, std=2.74\n  cycle_irregular_flag: 0.0%\n  early_menarche_flag: 9.5%\n\nWEARABLE SIGNALS:\n  resting_hr: mean=59.74 bpm\n  hrv_rmssd: mean=54.48 ms\n  sleep_score: mean=76.93\n  sleep_duration_min: mean=279.62 min\n"
+  },
+  {
+    "id": "pop_real_vs_synthetic_symptoms",
+    "metadata": {
+      "doc_type": "real_vs_synthetic",
+      "topic": "symptoms"
+    },
+    "text": "POPULATION SUMMARY --- Real vs Synthetic: Symptom Comparison\nReal: 5,659 rows, 42 users | Synthetic: 38,126 rows, 250 users\n\nSYMPTOM MEANS (Pipeline SEVERITY_MAP 0-5):\n  pain_score: real=0.72, synthetic=0.70\n  headache_score: real=1.20, synthetic=1.20\n  fatigue_score: real=2.36, synthetic=2.35\n  sleep_issue_score: real=1.82, synthetic=1.81\n  mood_instability: real=1.33, synthetic=1.34\n  stress_score: real=2.46, synthetic=2.46\n  bloating_score: real=1.40, synthetic=1.36\n  symptom_burden_score: real=1.69, synthetic=1.67\n  flow_volume_num: real=0.57, synthetic=0.54\n  heavy_flow_flag: real=0.03, synthetic=0.02\n"
+  },
+  {
+    "id": "pop_real_vs_synthetic_cycle_wearable",
+    "metadata": {
+      "doc_type": "real_vs_synthetic",
+      "topic": "cycle_wearable"
+    },
+    "text": "POPULATION SUMMARY --- Real vs Synthetic: Cycle & Wearable Comparison\n\nCYCLE AND WEARABLE MEANS:\n  cycle_length_estimate: real=30.22, synthetic=31.81\n  days_since_last_period: real=14.84, synthetic=14.89\n  cycle_length_variation: real=3.21, synthetic=2.31\n  resting_hr: real=69.52, synthetic=59.63\n  hrv_rmssd: real=55.06, synthetic=55.51\n  sleep_score: real=77.02, synthetic=77.10\n  sleep_duration_min: real=414.58, synthetic=260.05\n\nNote: Synthetic data mirrors real null rates and phase-conditional distributions.\n"
+  },
+  {
+    "id": "pop_symptom_cooccurrence",
+    "metadata": {
+      "doc_type": "symptom_cooccurrence"
+    },
+    "text": "POPULATION SUMMARY --- Symptom Co-occurrence Patterns\nWhen one symptom is elevated (score >=3), which other symptoms tend to be elevated?\n\n  When pain_score>=3: co-elevated -> headache_score (mean=1.51/5 vs baseline 1.20/5), mood_instability (mean=1.61/5 vs baseline 1.34/5), bloating_score (mean=1.79/5 vs baseline 1.37/5)\n  When headache_score>=3: co-elevated -> pain_score (mean=0.88/5 vs baseline 0.70/5)\n  When fatigue_score>=3: co-elevated -> none significant\n  When sleep_issue_score>=3: co-elevated -> none significant\n  When mood_instability>=3: co-elevated -> pain_score (mean=0.88/5 vs baseline 0.70/5)\n  When stress_score>=3: co-elevated -> none significant\n  When bloating_score>=3: co-elevated -> pain_score (mean=0.96/5 vs baseline 0.70/5)\n\nPHASE-SPECIFIC SYMPTOM BURDEN:\n  Menstrual: symptom_burden_score mean=2.02/5\n  Follicular: symptom_burden_score mean=1.56/5\n  Fertility: symptom_burden_score mean=1.61/5\n  Luteal: symptom_burden_score mean=1.63/5\n"
+  },
+  {
+    "id": "pop_wearable_symptom_correlation",
+    "metadata": {
+      "doc_type": "wearable_symptom_correlation"
+    },
+    "text": "POPULATION SUMMARY --- Wearable Signals and Symptom Correlations\n\nLOW HRV (<=p25=35.67 ms, n=9,324):\n  Symptoms: pain_score=0.72/5, fatigue_score=2.34/5, mood_instability=1.38/5, stress_score=2.45/5, bloating_score=1.44/5\n  symptom_burden_score: mean=1.69/5\n  Phase: Luteal 41.8%, Follicular 27.9%, Menstrual 15.4%\n\nHIGH HRV (>=p75=74.03 ms, n=9,326):\n  Symptoms: pain_score=0.73/5, fatigue_score=2.42/5, mood_instability=1.38/5, stress_score=2.46/5, bloating_score=1.36/5\n  symptom_burden_score: mean=1.69/5\n\nPOOR SLEEP (score <=p25=71.00, n=9,820):\n  Symptoms: pain_score=0.68/5, fatigue_score=2.32/5, mood_instability=1.30/5, stress_score=2.41/5, bloating_score=1.36/5\n  symptom_burden_score: mean=1.66/5\n\nGOOD SLEEP (score >=p75=83.00, n=10,403):\n  Symptoms: pain_score=0.72/5, fatigue_score=2.40/5, mood_instability=1.36/5, stress_score=2.52/5, bloating_score=1.36/5\n  symptom_burden_score: mean=1.69/5\n\nELEVATED BODY TEMP (>=p75=0.00 C, n=34,777):\n  Typical phase: Luteal 39.1%, Follicular 31.1%\n  Symptoms: pain_score=0.70/5, fatigue_score=2.35/5, mood_instability=1.35/5, stress_score=2.46/5, bloating_score=1.36/5\n  bleeding_present: 12.1%\n\nLOW BODY TEMP (<=p25=0.00 C, n=38,521):\n  Typical phase: Luteal 38.3%, Follicular 30.5%\n  Symptoms: pain_score=0.70/5, fatigue_score=2.35/5, mood_instability=1.35/5, stress_score=2.46/5, bloating_score=1.37/5\n  bleeding_present: 12.2%\n"
+  }
+]
