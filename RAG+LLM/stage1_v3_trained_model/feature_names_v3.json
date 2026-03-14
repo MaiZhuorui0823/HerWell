@@ -1,0 +1,19 @@
+[
+  "cycle_length_estimate",
+  "cycle_length_variation",
+  "days_since_last_period",
+  "bleeding_duration_days",
+  "pain_score",
+  "pain_trend",
+  "headache_score",
+  "fatigue_score",
+  "sleep_issue_score",
+  "mood_instability",
+  "stress_score",
+  "bloating_score",
+  "symptom_burden_score",
+  "flow_volume_num",
+  "heavy_flow_flag",
+  "age",
+  "sexual_activity_flag"
+]

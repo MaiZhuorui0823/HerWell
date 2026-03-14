@@ -1,0 +1,44 @@
+{
+  "user_id": "test_user_1",
+  "timestamp": "2026-03-14T13:54:08.634342",
+  "risk_assessment": {
+    "final_risk_level": 0,
+    "risk_label": "Normal",
+    "decision_source": "ml_high_confidence",
+    "ml_confidence": 0.7129400988069796
+  },
+  "user_context": {
+    "primary_symptoms": [],
+    "cycle_info": {
+      "cycle_length": 13.833333333333334,
+      "days_since_period": -11.0
+    },
+    "all_features": {
+      "cycle_length_estimate": 13.833333333333334,
+      "cycle_length_variation": 8.314979788844282,
+      "days_since_last_period": -11.0,
+      "bleeding_duration_days": 0.0,
+      "pain_score": 0.0,
+      "pain_trend": 0.0,
+      "headache_score": 0.0,
+      "fatigue_score": 0.0,
+      "sleep_issue_score": 0.0,
+      "mood_instability": 0.0,
+      "stress_score": 0.0,
+      "bloating_score": 0.0,
+      "symptom_burden_score": 0.0,
+      "flow_volume_num": 0.0,
+      "heavy_flow_flag": 0.0,
+      "age": 27.0,
+      "sexual_activity_flag": 1.0
+    }
+  },
+  "rag_retrieval_hints": {
+    "keywords": [
+      "irregular cycles",
+      "abnormal cycle length"
+    ],
+    "rule_trigger": "abnormal_cycle_length",
+    "medical_citation": "Normal menstrual cycles occur every 21-35 days"
+  }
+}
